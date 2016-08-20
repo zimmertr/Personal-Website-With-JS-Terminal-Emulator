@@ -12,6 +12,18 @@ var commands = [
         ["weather:\t", "Show a weather report for the location of the server."]
 ];
 
+var servers = [
+	["Apache:\t", "Nix.sol.milkyway\t", "http://tjzimmerman.com:2000/"],
+	["Deluge:\t", "Janus.sol.milkyway\t", "http://tjzimmerman.com:8112/"],
+	["LibreNMS:\t", "Mimas.sol.milkyway\t", "http://tjzimmerman.com:8442/"],
+	["Mollify:\t", "Nix.sol.milkyway\t", "http://tjzimmerman.com:2000/mollify/"],
+	["Nextcloud:\t", "Nix.sol.milkyway\t", "http://tjzimmerman.com:2000/nextcloud/"],
+	["OpenVPN:\t", "Titan.sol.milkyway\t", "https://tjzimmerman.com:943/admin/"],
+	["Plex:\t", "Janus.sol.milkyway\t", "https://tjzimmerman.com:32400/web/index.html"],
+	["PRTG:\t", "IO.sol.milkyway\t", "http://tjzimmerman.com:8445/index.htm"],
+	["Grafana:\t", "Ymir.sol.milkyway\t", "http://tjzimmerman.com:8441/login"],
+	["vROps:\t", "Eris.sol.milkyway\t", "https://tjzimmerman.com:8444/ui"]
+]
 
 function handle(e){
         if(e.keyCode === 13){ //If return key is pressed
