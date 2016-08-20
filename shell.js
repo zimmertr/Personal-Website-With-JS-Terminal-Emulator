@@ -32,7 +32,7 @@ function handle(e){
 					document.getElementById('outbox').value += "What do you want to echo?\n";
 				}
 				else{
-					document.getElementById('outbox').value += "Error! Invalid command.\n";
+					document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
 				}
 			}
 			else{
@@ -87,7 +87,7 @@ function handle(e){
 
 		else {
 			document.getElementById('outbox').value += "root@tj > " + input + "\n";
-			document.getElementById('outbox').value += "Error! Invalid command.\n";
+			document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
 		} 
 		
 
