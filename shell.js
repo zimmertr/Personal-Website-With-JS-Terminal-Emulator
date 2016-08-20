@@ -23,6 +23,7 @@ function handle(e){
 			document.getElementById('outbox').value = "";
 		}
 		
+
 		else if(input.startsWith("echo")){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			var output = "";
@@ -42,30 +43,37 @@ function handle(e){
 			document.getElementById('outbox').value += output + "\n";	
 		}
 
+
 		else if(input == "help"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value += "The following commands are supported: \n\n";
+
 			for (var i = 0; i < commands.length; i++){
 				document.getElementById('outbox').value += commands[[i],[i]];
 				document.getElementById('outbox').value += "\n";	
 			}
 		}
 
+
 		else if (input == "history"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 		
+
 		else if (input == "info"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		
 		}
 
+
 		else if (input == "ipaddr"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+
 			var domain = location.hostname;
 			var port = location.port;
 			var pathname = location.pathname;
 			var protocol = location.protocol;
+
 			protocol = protocol.replace(/:$/, ""); //Remove the stupid colon after the protocol.
 
 			document.getElementById('outbox').value += "Domain: " + domain + "\n";
@@ -74,25 +82,31 @@ function handle(e){
 			document.getElementById('outbox').value += "protocol: " + protocol + "\n";
 		}
 
+
 		else if (input == "man"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
+
 
 		else if (input == "nslookup"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
+
 		else if (input == "ping"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
+
 
 		else if (input == "status"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
+
 		else if (input == "weather"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
+
 
 		else {
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
@@ -109,6 +123,7 @@ function cleanUp(){
 	if(document.getElementById('outbox').selectionStart == document.getElementById('outbox').selectionEnd){ //Automatically scroll to end of output.
 		document.getElementById('outbox').scrollTop = document.getElementById('outbox').scrollHeight;
 	}
+
 	document.getElementById('outbox').value += "\n"; //Place an empty line after a command runs.
 	document.getElementById('shell').value = ""; //Reset the shell prompt after a command runs.
 }
