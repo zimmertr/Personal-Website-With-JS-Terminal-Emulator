@@ -19,12 +19,12 @@ function handle(e){
 		var input=document.getElementById('shell').value
 		
 		if (input == "clear"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value = "";
 		}
 		
 		else if(input.startsWith("echo")){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			var output = "";
 
 			if (input.length < 6 || !input.includes(" ")){ 
@@ -43,7 +43,7 @@ function handle(e){
 		}
 
 		else if(input == "help"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value += "The following commands are supported: \n\n";
 			for (var i = 0; i < commands.length; i++){
 				document.getElementById('outbox').value += commands[[i],[i]];
@@ -52,41 +52,50 @@ function handle(e){
 		}
 
 		else if (input == "history"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
-		
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 		
 		else if (input == "info"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		
 		}
 
 		else if (input == "ipaddr"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			var domain = location.hostname;
+			var port = location.port;
+			var pathname = location.pathname;
+			var protocol = location.protocol;
+			protocol = protocol.replace(/:$/, ""); //Remove the stupid colon after the protocol.
+
+			document.getElementById('outbox').value += "Domain: " + domain + "\n";
+			document.getElementById('outbox').value += "Port: " + port + "\n";
+			document.getElementById('outbox').value += "pathname: " + pathname + "\n";
+			document.getElementById('outbox').value += "protocol: " + protocol + "\n";
 		}
 
 		else if (input == "man"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
 		else if (input == "nslookup"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
 		else if (input == "ping"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
 		else if (input == "status"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
 		else if (input == "weather"){
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		}
 
 		else {
-			document.getElementById('outbox').value += "root@tj > " + input + "\n";
+			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
 		} 
 		
