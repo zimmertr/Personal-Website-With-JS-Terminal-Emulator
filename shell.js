@@ -84,14 +84,6 @@ function handle(e){
 
 		else if (input == "history"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
-		
-			//var tmp = localStorage.getItem('history');
-	                //tmp = JSON.stringify(tmp); 
-			//tmp = tmp.replace(/\"/g, ""); 
-			//tmp = tmp.replace(/[\[\]]/g, "");
-			//tmp = tmp.replace(/\\/g, "");
-			//tmp = tmp.replace(/,/g, "\n");
-			//document.getElementById('outbox').value += tmp + "\n";
 			document.getElementById('outbox').value += JSON.parse(localStorage.getItem("history")).join('\n') + '\n';
 		}
 		
