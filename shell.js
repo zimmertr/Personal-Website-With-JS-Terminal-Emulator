@@ -4,7 +4,7 @@ var commands = [
         ["help:\t", "Print a list of commands and their descriptions."],
         ["history:\t", "Display previously executed commands."],
 	["info:\t", "Query a specific server for its health information."],
-        ["ipaddr:\t", "Display the IP Address of the domain."],
+        ["ipaddr:\t", "Display connection information for the web server."],
         ["man:\t", "Display the manual for a specified command."],
 	["nslookup:\t", "Query an internet name server for information."],
         ["ping:\t", "Send an ICMP request to a webserver and display the response."],
@@ -105,9 +105,9 @@ function handle(e){
 			protocol = protocol.replace(/:$/, ""); //Remove the stupid colon after the protocol.
 
 			document.getElementById('outbox').value += "Domain: " + domain + "\n";
+			document.getElementById('outbox').value += "Protocol: " + protocol + "\n";
 			document.getElementById('outbox').value += "Port: " + port + "\n";
-			document.getElementById('outbox').value += "pathname: " + pathname + "\n";
-			document.getElementById('outbox').value += "protocol: " + protocol + "\n";
+			document.getElementById('outbox').value += "Path: " + pathname + "\n";
 		}
 
 
