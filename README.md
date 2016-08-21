@@ -4,20 +4,20 @@ This repository is a clone of my personal website. I made it both as a way to le
 root@tjsh > help
 The following commands are supported: 
 
-clear:		Clear the text area.
-echo:		Display a specified line of text.
-help:		Print a list of commands and their descriptions.
-history:	Display previously executed commands.
-info:		Query a specific server for its health information.
-ipaddr:		Display connection information for the web server.
-man:		Display the manual for a specified command.
-nslookup:	Query an internet name server for information.
-ping:		Send an ICMP request to a webserver and display the response.
-status:		Show the current status of all servers.
-weather:	Show a weather report for the location of the server.
+clear:		Clear the text area.  
+echo:		Display a specified line of text.  
+help:		Print a list of commands and their descriptions.  
+history:	Display previously executed commands.  
+info:		Query a specific server for its health information.  
+ipaddr:		Display connection information for the web server.  
+man:		Display the manual for a specified command.  
+nslookup:	Query an internet name server for information.  
+ping:		Send an ICMP request to a webserver and display the response.  
+status:		Show the current status of all servers.  
+weather:	Show a weather report for the location of the server.  
 
-Requirements to run: 
--A webserver (Using Apache)
--NodeJS
--NPM
--Express NodeJS Web Framework (For bash script calls)
+Requirements to run:   
+-A webserver (Using Apache)  
+-NodeJS  
+-NPM  
+-Express NodeJS Web Framework (For bash script calls)  
