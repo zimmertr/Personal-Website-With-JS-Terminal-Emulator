@@ -25,7 +25,10 @@ var servers = [
 	["vROps:\t", "Eris.sol.milkyway\t", "https://tjzimmerman.com:8444/ui"]
 ]
 
-localStorage.setItem('history', JSON.stringify([]));
+//Check if localstorage history key is null. If it is, create it. If not, maintain old history.
+if (localStorage.getItem("history") === null){
+	localStorage.setItem('history', JSON.stringify([]));
+}
 
 function handle(e){
         if(e.keyCode === 13){ //If return key is pressed
