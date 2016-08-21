@@ -25,11 +25,23 @@ var servers = [
 	["vROps:\t", "Eris.sol.milkyway\t", "https://tjzimmerman.com:8444/ui"]
 ]
 
+localStorage.setItem('history', JSON.stringify([]));
+
 function handle(e){
         if(e.keyCode === 13){ //If return key is pressed
 		event.preventDefault(); //prevent page from refreshing when submission is made
 		var input=document.getElementById('shell').value
+	
+		//Maintain history in local storage by taking the current storage, pushing it to a
+		//json file, appending the new history item to the json file, and then pushing the
+		//json file's contents back to the local storage. Necessary because local storage 
+		//can only be given a single object at a time. Not an array. >_>	
+		var tmp = localStorage.getItem('history');
+		tmp = JSON.parse(tmp);
+		tmp.push(input);
+		localStorage.setItem('history', JSON.stringify(tmp));
 		
+	
 		if (input == "clear"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value = "";
@@ -61,7 +73,7 @@ function handle(e){
 			document.getElementById('outbox').value += "The following commands are supported: \n\n";
 
 			for (var i = 0; i < commands.length; i++){
-				document.getElementById('outbox').value += commands[[i],[i]];
+				document.getElementById('outbox').value += commands[i][0] + commands[i][1];
 				document.getElementById('outbox').value += "\n";	
 			}
 		}
@@ -69,6 +81,8 @@ function handle(e){
 
 		else if (input == "history"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			document.getElementById('outbox').value += localStorage.getItem('history');
+			//alert(localStorage.getItem('history'));
 		}
 		
 
