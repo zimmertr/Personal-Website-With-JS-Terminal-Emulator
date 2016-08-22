@@ -18,6 +18,4 @@ weather:	Show a weather report for the location of the server.
 
 Requirements to run:   
 -A webserver (Using Apache)  
--NodeJS  
--NPM  
--Express NodeJS Web Framework (For bash script calls)  
+-php (For scripts to run)

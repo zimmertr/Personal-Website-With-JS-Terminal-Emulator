@@ -108,6 +108,11 @@ function handle(e){
 			document.getElementById('outbox').value += "Protocol: " + protocol + "\n";
 			document.getElementById('outbox').value += "Port: " + port + "\n";
 			document.getElementById('outbox').value += "Path: " + pathname + "\n";
+			
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.open('GET', '/cgi-bin/getIP.cgi', false);
+			httpRequest.send(null);
+			document.getElementById('outbox').value += "IP: " + httpRequest.responseText;
 		}
 
 
