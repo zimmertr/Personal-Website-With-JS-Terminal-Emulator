@@ -1,7 +1,7 @@
 var commands = [
         ["clear:\t", "Clear the text area."],
-        ["echo:\t", "Display a specified line of text."],
-        ["help:\t", "Print a list of commands and their descriptions."],
+        ["echo:\t", "Write arguements to the standard output."],
+        ["help:\t", "List all tjsh commands to the standard output."],
         ["history:\t", "Display previously executed commands."],
 	["info:\t", "Query a specific server for its health information."],
         ["ipaddr:\t", "Display connection information for the web server."],
@@ -115,8 +115,44 @@ function handle(e){
 		}
 
 
-		else if (input == "man"){
+		else if (input.startsWith("man")){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			if (input == "man clear"){
+				document.getElementById('outbox').value += "CLEAR - Clear the text area.\n\nDESCRIPTION - Clear clears your screen if this is possible, including its scrollback buffer. Clear does not accept any arguements.\n";
+			}
+			else if (input == "man echo"){
+                                document.getElementById('outbox').value += "ECHO - Write arguements to the standard output.\n\nDESCRIPTION - The echo utility writes any specified operands, separated by singe blank (' ') characters and followed by a newline ('\\n') character, to the standard output.\n\nSTRUCTURE - echo [string ...]\n";
+                        }
+                        else if (input == "man help"){
+                                document.getElementById('outbox').value += "HELP - List all tjsh commands to the standard output.\n\nDESCRIPTION - The help utility writes a list of all available tjsh commands to the standard output as well as description of the purpose of each command.\n";
+                        }
+                        else if (input == "man history"){
+                                document.getElementById('outbox').value += "HISTORY - Display previously executed commands.\n\nDESCRIPTION - History displays all previously executed commands that are held within your browser's local storage.\n";
+                        }
+                        else if (input == "man info"){
+                                document.getElementById('outbox').value += "INFO - Query a specific server for its health information.\n\nINFO - Info queries a server for a specified health state. Supported health information includes cpu, memory, load, swap, tx, rx, and uptime.\n\nSTRUCTURE - info [hostname] [health state]\n";
+                        }
+                        else if (input == "man ipaddr"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else if (input == "man man"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else if (input == "man nslookup"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else if (input == "man ping"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else if (input == "man status"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else if (input == "man weather"){
+                                document.getElementById('outbox').value += " ";
+                        }
+                        else{
+				document.getElementById('outbox').value += " ";
+			}
 		}
 
 
