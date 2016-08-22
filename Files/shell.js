@@ -96,6 +96,9 @@ function handle(e){
 
 		else if (input == "ipaddr"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			var req = new XMLHttpRequest();
+			req.open('GET', '/cgi-bin/getIP.cgi', false);
+			req.send(null);
 
 			var domain = location.hostname;
 			var port = location.port;
@@ -104,15 +107,11 @@ function handle(e){
 
 			protocol = protocol.replace(/:$/, ""); //Remove the stupid colon after the protocol.
 
+			document.getElementById('outbox').value += "IP Address: " + req.responseText;
 			document.getElementById('outbox').value += "Domain: " + domain + "\n";
 			document.getElementById('outbox').value += "Protocol: " + protocol + "\n";
 			document.getElementById('outbox').value += "Port: " + port + "\n";
 			document.getElementById('outbox').value += "Path: " + pathname + "\n";
-			
-			var httpRequest = new XMLHttpRequest();
-			httpRequest.open('GET', '/cgi-bin/getIP.cgi', false);
-			httpRequest.send(null);
-			document.getElementById('outbox').value += "IP: " + httpRequest.responseText;
 		}
 
 
@@ -138,6 +137,11 @@ function handle(e){
 
 		else if (input == "weather"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			var req = new XMLHttpRequest();
+                        req.open('GET', '/cgi-bin/getWeather.cgi', false);
+                        req.send(null);
+			
+			document.getElementById('outbox').value += req.responseText;
 		}
 
 
