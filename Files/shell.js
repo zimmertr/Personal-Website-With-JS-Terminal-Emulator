@@ -130,16 +130,16 @@ function handle(e){
                                 document.getElementById('outbox').value += "HISTORY - Display previously executed commands.\n\nDESCRIPTION - History displays all previously executed commands that are held within your browser's local storage.\n";
                         }
                         else if (input == "man info"){
-                                document.getElementById('outbox').value += "INFO - Query a specific server for its health information.\n\nINFO - Info queries a server for a specified health state. Supported health information includes cpu, memory, load, swap, tx, rx, and uptime.\n\nSTRUCTURE - info [hostname] [health state]\n";
+                                document.getElementById('outbox').value += "INFO - Query a specific server for its health information.\n\nDESCRIPTION - Info queries a server for a specified health state. Supported health information includes cpu, memory, load, swap, tx, rx, and uptime.\n\nSTRUCTURE - info [hostname] [health state]\n";
                         }
                         else if (input == "man ipaddr"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "IPADDR - Return network information about the server.\n\nDESCRIPTION - Ipaddr queries the server for information relating to it's network configuraiton. Displays the server's IP Address, domain, protocol, port, and relative path.";
                         }
                         else if (input == "man man"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "MAN - Format and display the on-line manual pages.\n\nDESCRIPTION - Man returns information on how to use the various commands that are supported by tjsh. ";
                         }
                         else if (input == "man nslookup"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "NSLOOKUP - Query DNS for a domain's IP configuration.\n\nDESCRIPTION - NSlookup returns IP configuration information for a domain that you specify by querying your computer's DNS.\n\nSTRUCTURE - nslookup [hostname|ip address]\n ";
                         }
                         else if (input == "man ping"){
                                 document.getElementById('outbox').value += " ";
@@ -156,8 +156,31 @@ function handle(e){
 		}
 
 
-		else if (input == "nslookup"){
+		else if (input.startsWith("nslookup")){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			
+			if (input.length < 10 || !input.includes(" ")){
+				if (input == "nslookup" || input == "nslookup "){
+					document.getElementById('outbox').value += "For what domain did you want to query IP information?\n";
+				}
+				else{
+					document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
+				}
+			}	
+			else{
+					
+				hostname = input.substring(9);
+				var req = new XMLHttpRequest();
+				req.open('GET', '/cgi-bin/nslookup.cgi?'+ hostname, false);
+				req.send(null);		
+				
+				if (req.responseText == ""){
+					document.getElementById('outbox').value += "Domain or IP not found in namserver.\n";
+				}
+				else{			
+					document.getElementById('outbox').value += req.responseText;	
+				}
+			}
 		}
 
 
