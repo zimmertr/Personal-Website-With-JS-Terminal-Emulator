@@ -21,4 +21,4 @@ Requirements to run:
 -php (For scripts to run)  
 -Provided scripts placed in /usr/lib/cgi-bin/  
 -weatherpy: https://github.com/cmcdowell/weatherpy  
--Cronjob to update weather every minute: * * * * * weather fips2634000 > /usr/lib/cgi-bin/weather.txt  
+-Cronjob to update weather every minute: * * * * * /usr/lib/cgi-bin/getWeather.sh 
