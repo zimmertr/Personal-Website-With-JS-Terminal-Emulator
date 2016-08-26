@@ -142,7 +142,7 @@ function handle(e){
                                 document.getElementById('outbox').value += "NSLOOKUP - Query DNS for a domain's IP configuration.\n\nDESCRIPTION - NSlookup returns IP configuration information for a domain that you specify by querying your computer's DNS.\n\nSTRUCTURE - nslookup [hostname|ip address]\n ";
                         }
                         else if (input == "man ping"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "PING - Ping a domain.\n\nDESCRIPTION - The ping utility uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.\n\nSTRUCTURE - ping [hostname|ip address]\n";
                         }
                         else if (input == "man status"){
                                 document.getElementById('outbox').value += " ";
@@ -184,8 +184,30 @@ function handle(e){
 		}
 
 
-		else if (input == "ping"){
+		else if (input.startsWith("ping")){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+			
+				if (input.length < 6 || !input.includes(" ")){
+					if (input == "ping" || input == "ping "){
+						document.getElementById('outbox').value += "What domain did you want to ping?\n";
+					}
+					else{
+						document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
+					}	
+				}
+				else{
+					hostname = input.substring(5);
+					var req = new XMLHttpRequest();
+					req.open('GET', '/cgi-bin/ping.cgi?' + hostname, false);
+					req.send(null);
+
+					if (req.resposneText == ""){
+						document.getElementById('outbox').value += "Domain or IP not found in nameserver.\n";
+					}
+					else{
+						document.getElementById('outbox').value += req.responseText;
+					}		
+				}		
 		}
 
 
