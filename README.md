@@ -20,5 +20,5 @@ Requirements to run:
 -A webserver (Using Apache)  
 -php (For scripts to run)  
 -Provided scripts placed in /usr/lib/cgi-bin/  
--weather-util and weather-util-data packages  
+-weatherpy: https://github.com/cmcdowell/weatherpy  
 -Cronjob to update weather every minute: * * * * * weather fips2634000 > /usr/lib/cgi-bin/weather.txt  
