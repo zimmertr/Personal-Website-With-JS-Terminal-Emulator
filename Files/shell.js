@@ -148,7 +148,7 @@ function handle(e){
                                 document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to resolve a TCP connection to each of servers hosted on tjzimmerman.com If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value.\n";
                         }
                         else if (input == "man weather"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "WEATHER - Return the current weather at the location of the server.\n\nDESCRIPTION - The weather utility queries a python script, weatherpy, for the current forceast of the location of the server. Provided information includes temperature in fahrenheit and celsius, sky conditions, wind direction, speed, and gust speed, and the relative humidity.\n";
                         }
                         else{
 				document.getElementById('outbox').value += " ";
