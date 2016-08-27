@@ -133,7 +133,7 @@ function handle(e){
                                 document.getElementById('outbox').value += "INFO - Query a specific server for its health information.\n\nDESCRIPTION - Info queries a server for a specified health state. Supported health information includes cpu, memory, load, swap, tx, rx, and uptime.\n\nSTRUCTURE - info [hostname] [health state]\n";
                         }
                         else if (input == "man ipaddr"){
-                                document.getElementById('outbox').value += "IPADDR - Return network information about the server.\n\nDESCRIPTION - Ipaddr queries the server for information relating to it's network configuraiton. Displays the server's IP Address, domain, protocol, port, and relative path.";
+                                document.getElementById('outbox').value += "IPADDR - Return network information about the server.\n\nDESCRIPTION - Ipaddr queries the server for information relating to it's network configuraiton. Displays the server's IP Address, domain, protocol, port, and relative path.\n";
                         }
                         else if (input == "man man"){
                                 document.getElementById('outbox').value += "MAN - Format and display the on-line manual pages.\n\nDESCRIPTION - Man returns information on how to use the various commands that are supported by tjsh. ";
