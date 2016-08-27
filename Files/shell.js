@@ -213,6 +213,13 @@ function handle(e){
 
 		else if (input == "status"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+		
+				hostname = input.substring(7);
+				var req = new XMLHttpRequest();
+				req.open('GET', '/cgi-bin/status.cgi?'+ hostname, false);
+				req.send(null);		
+				
+				document.getElementById('outbox').value += req.responseText;	
 		}
 
 
