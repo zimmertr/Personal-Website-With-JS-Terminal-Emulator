@@ -145,7 +145,7 @@ function handle(e){
                                 document.getElementById('outbox').value += "PING - Ping a domain.\n\nDESCRIPTION - The ping utility uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.\n\nSTRUCTURE - ping [hostname|ip address]\n";
                         }
                         else if (input == "man status"){
-                                document.getElementById('outbox').value += " ";
+                                document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to resolve a TCP connection to each of servers hosted on tjzimmerman.com If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value.\n";
                         }
                         else if (input == "man weather"){
                                 document.getElementById('outbox').value += " ";
