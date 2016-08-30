@@ -91,6 +91,8 @@ function handle(e){
 		else if (input == "info"){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 		
+			
+		
 		}
 
 
