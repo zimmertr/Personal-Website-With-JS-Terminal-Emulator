@@ -76,9 +76,30 @@ function handle(e){
 		}
 		
 
-		else if (input == "info"){
+		else if (input.startsWith("info")){
 			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
-		
+				
+				 if (input.length < 6 || !input.includes(" ")){
+                                        if (input == "info" || input == "info "){
+                                                document.getElementById('outbox').value += "What server are you trying to query?\n";
+                                        }
+                                        else{
+                                                document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
+                                        }
+                                }
+                                else{
+                                        hostname = input.substring(5);
+                                        var req = new XMLHttpRequest();
+                                        req.open('GET', '/cgi-bin/info.cgi?' + hostname, false);
+                                        req.send(null);
+
+                                        if (req.resposneText == ""){
+                                                document.getElementById('outbox').value += "That server is either not responding or doesn't exist..\n";
+                                        }
+                                        else{
+                                                document.getElementById('outbox').value += req.responseText;
+                                        }
+                                }	
 		}
 
 
