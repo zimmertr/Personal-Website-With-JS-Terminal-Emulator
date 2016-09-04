@@ -96,7 +96,7 @@ function handle(e){
                                                 document.getElementById('outbox').value += "That server is either not responding or doesn't exist..\n";
                                         }
                                         else{
-                                                document.getElementById('outbox').value += req.responseText + "\n";
+                                                document.getElementById('outbox').value += req.responseText;
                                         }
                                 }	
 		}

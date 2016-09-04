@@ -56,6 +56,18 @@ printf "Memory:\t$memUsed GB/$memTotalReal GB ($memPercent%%)\n"
 
 
 
+#Print swap space usage
+swapTotal=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING .1.3.6.1.4.1.2021.4.3.0 | awk '{print $4/1024000}' | cut -c 1-4)
+swapAvail=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING .1.3.6.1.4.1.2021.4.4.0 | awk '{print $4/1024000}' | cut -c 1-4)
+
+swapUsed=$(awk "BEGIN {print $swapTotal - $swapAvail; exit}")
+swapPercent=$(awk "BEGIN {print ($swapUsed/ $swapTotal)*100; exit}" | cut -c 1-4)
+
+printf "Swap:\t$swapUsed GB / $swapTotal GB ($swapPercent%%)\n"
+
+
+
+
 #Print 1, 5, and 15 minute load averages separated by tabs.
 printf "Load:\t1M: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING .1.3.6.1.4.1.2021.10.1.3.1 2> /dev/null | awk '{print $4}' | tr -d '""') \t5M: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING .1.3.6.1.4.1.2021.10.1.3.2 2> /dev/null | awk '{print $4}' | tr -d '""') \t15M: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING .1.3.6.1.4.1.2021.10.1.3.3 2> /dev/null | awk '{print $4}' | tr -d '""')\n"
 
@@ -63,4 +75,10 @@ printf "Load:\t1M: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING .1.3.6
 
 
 #Print number of users logged in
-printf "Users:\t$(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.1.5 | awk '{print $4}')"
+printf "Users:\t$(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.1.5 | awk '{print $4}')\n"
+
+
+
+
+#Print number of users processes running on machine
+printf "Processes:\t$(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.1.6 | awk '{print $4}')\n"
