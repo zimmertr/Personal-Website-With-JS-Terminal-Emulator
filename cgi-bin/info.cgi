@@ -41,7 +41,17 @@ echo "CPU:                $(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING .1.3
 
 
 #Print used and total system memory
-printf "Memory:\tUsed: \tTotal: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.2.2 | awk '{print $4/1024000}' | cut -c 1-4) GB\n"
+#printf "Memory:\tUsed: \tTotal: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.2.2 | awk '{print $4/1024000}' | cut -c 1-4) GB\n"
+memTotalReal=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING 1.3.6.1.4.1.2021.4.5.0 | awk '{print $4/1024000}' | cut -c 1-4)
+memAvailReal=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING 1.3.6.1.4.1.2021.4.6.0 | awk '{print $4/1024000}' | cut -c 1-4) 
+memBuffer=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING 1.3.6.1.4.1.2021.4.14.0 | awk '{print $4/1024000}' | cut -c 1-4)
+memCache=$(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING 1.3.6.1.4.1.2021.4.15.0 | awk '{print $4/1024000}' | cut -c 1-4)
+
+memFree=$(awk "BEGIN {print $memAvailReal + $memBuffer + $memCache; exit}")
+memUsed=$(awk "BEGIN {print $memTotalReal - $memFree; exit}")
+memPercent=$(awk "BEGIN {print ($memUsed / $memTotalReal)*100; exit}" | cut -c 1-4)
+
+printf "Memory:\t$memUsed GB/$memTotalReal GB ($memPercent%%)\n"
 
 
 
@@ -52,4 +62,5 @@ printf "Load:\t1M: $(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING .1.3.6
 
 
 
-
+#Print number of users logged in
+printf "Users:\t$(snmpwalk -t .5 -Os -c $comstring -v 2c $QUERY_STRING 1.3.6.1.2.1.25.1.5 | awk '{print $4}')"
