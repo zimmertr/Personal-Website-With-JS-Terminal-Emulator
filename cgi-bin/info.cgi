@@ -10,8 +10,8 @@ echo ""
 
 #############
 #Print CPU usage for each core. For some reason printf wouldn't display anything other than the first parameter. Had to use echo which means escape characters
-#############
 #like \t and \t aren't supported. 
+#############
 echo "CPU Usage:          $(snmpwalk -v2c -c $comstring -v 2c $QUERY_STRING .1.3.6.1.2.1.25.3.3.1.2 2> /dev/null | awk '{print $4}' | sed ':a;N;$!ba;s/\n/%, /g')%"
 
 
