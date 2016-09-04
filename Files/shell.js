@@ -34,7 +34,6 @@ function handle(e){
 		
 	
 		if (input == "clear"){
-			document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 			document.getElementById('outbox').value = "";
 		}
 		
@@ -257,7 +256,7 @@ function cleanUp(){
 	if(document.getElementById('outbox').selectionStart == document.getElementById('outbox').selectionEnd){ //Automatically scroll to end of output.
 		document.getElementById('outbox').scrollTop = document.getElementById('outbox').scrollHeight;
 	}
-
+	
 	document.getElementById('outbox').value += "\n"; //Place an empty line after a command runs.
 	document.getElementById('shell').value = ""; //Reset the shell prompt after a command runs.
 }
