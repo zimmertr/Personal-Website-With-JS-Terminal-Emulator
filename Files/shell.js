@@ -82,10 +82,13 @@ function handle(e){
                                         if (input == "info" || input == "info "){
                                                 document.getElementById('outbox').value += "What server are you trying to query?\n";
                                         }
-                                        else{
+					else{
                                                 document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
                                         }
                                 }
+                                else if (input.includes(".") && !input.includes(".sol.milkyway")){
+					document.getElementById('outbox').value += "Only internal SNMP-enabled hosts are supported.\n";	
+				}
                                 else{
                                         hostname = input.substring(5);
                                         var req = new XMLHttpRequest();
