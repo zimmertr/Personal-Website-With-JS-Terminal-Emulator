@@ -1,2 +1,2 @@
 #!/bin/bash
-weatherpy > weather.txt
+weatherpy | head -n -1 > weather.txt
