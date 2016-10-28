@@ -56,12 +56,14 @@ function handle(e){
 			else if(input.startsWith("echo")){
 				var output = "";
 
+				document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
+
 				if (input.length < 6 || !input.includes(" ")){ 
 					if (input == "echo" || input == "echo "){
-						document.getElementById('outbox').value += "What do you want to echo?\n";
+						document.getElementById('outbox').value += "What do you want to echo?";
 					}
 					else{
-						document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
+						document.getElementById('outbox').value += "-tjsh: command not found: " + input;
 					}
 				}
 				else{
