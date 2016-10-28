@@ -1,0 +1,183 @@
+body {
+	background-color: #26353f;
+	margin: 0;
+	padding: 0;
+}
+
+
+.pageContainer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.vertAlign {
+	position: relative;
+	top: 45%;
+	transform: translateY(-50%);
+	width: 50%;
+	margin: auto;
+}
+
+.header {
+	text-align: center;
+	font-size: 40pt;
+        vertical-align: middle;
+	color: #d08770;
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+.subHeader {
+	text-align: center;
+	font-size: 11pt;
+	vertical-align: middle;
+	margin: auto;
+	color: #d08770;
+	padding-bottom: 7px;
+}
+
+.underline {
+	margin: 0 auto;	
+	border-bottom: 1px solid #eff1f5;
+	width: 675px;
+}
+
+.boxContainer {
+	display: table;
+	width: 100%;
+	border-spacing: 26px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.box {
+	display: table-cell;
+	width: 33.3%;
+	height: 200px;
+	text-align: center;
+	background-color: #343d46;
+	padding: 10px;
+	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	padding-top: 20px;
+	font-size: 90%;
+}
+
+.boxContent{
+#	-webkit-columns: 2; /* Chrome, Safari, Opera */
+#	-moz-columns: 2; /* Firefox */
+#	columns: 2;
+}
+
+.boxHeader {
+	font-size: 14pt;
+	text-align: center;
+	vertical-align: middle;
+	height: 22px;
+	color: #343d46;
+	font-weight: 500;
+}
+
+#boxHeader1 {
+	background-color: #A3BE8C;
+}
+
+#boxHeader2 {
+	background-color: #CCD7E4;
+}
+
+#boxHeader3 {
+	background-color: #A0ECd0;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #bfc0c4;
+}
+
+ul {
+	list-style-type: none;
+	text-align: left;
+	padding: 0;
+}
+
+@media only screen and (max-width: 871px) {
+	.box {
+		display: block;
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 24px;
+	}
+
+	.vertAlign {
+		transform: translateY(0%);
+		top: 0%;
+		bottom: 0%;
+	}
+}
+
+.searchForm {
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.searchInput {
+	width: 100%;
+	border: none;
+	margin: auto;
+	display: block;
+	padding: 5px 5px;
+	background-color: #343d46;
+	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	font-size: 75%;
+	color: #F6Ca83;
+	font-family: 'Inconsolata', monospace;	
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #F6CA83;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #F6CA83;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #F6CA83;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #F6CA83;
+}
+
+a:hover {
+	color: #d08770;
+}
+
+a:active {
+	color: #d08770;
+}
+#outbox{
+	resize: vertical;
+	-moz-tab-size: 20;
+	-o-tab-size: 20;
+	tab-size: 20;
+	font-size: 77%;
+	font-family: 'Inconsolata', monospace;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+	color: #d08770;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+a{
+	font-family: 'Inconsolata', monospace;
+}
