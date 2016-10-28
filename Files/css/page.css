@@ -2,7 +2,6 @@ body {
 	background-color: #26353f;
 	margin: 0;
 	padding: 0;
-	font-family: "Georgia";
 }
 
 
@@ -14,9 +13,9 @@ body {
 
 .vertAlign {
 	position: relative;
-	top: 50%;
+	top: 45%;
 	transform: translateY(-50%);
-	width: 65%;
+	width: 50%;
 	margin: auto;
 }
 
@@ -26,7 +25,7 @@ body {
         vertical-align: middle;
 	color: #d08770;
 	margin: auto;
-	padding-bottom: 2px;
+	padding-bottom: 10px;
 }
 
 .subHeader {
@@ -58,13 +57,17 @@ body {
 	height: 200px;
 	text-align: center;
 	background-color: #343d46;
-	border: 10px solid #28323b;
-	outline: #2c3e50 solid 4px;
 	padding: 10px;
 	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
 	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
 	padding-top: 20px;
+	font-size: 90%;
+}
+
+.boxContent{
+#	-webkit-columns: 2; /* Chrome, Safari, Opera */
+#	-moz-columns: 2; /* Firefox */
+#	columns: 2;
 }
 
 .boxHeader {
@@ -73,6 +76,7 @@ body {
 	vertical-align: middle;
 	height: 22px;
 	color: #343d46;
+	font-weight: 500;
 }
 
 #boxHeader1 {
@@ -90,7 +94,7 @@ body {
 a:link,
 a:visited {
 	text-decoration: none;
-	color: #eff1f5;
+	color: #bfc0c4;
 }
 
 ul {
@@ -127,14 +131,11 @@ ul {
 	display: block;
 	padding: 5px 5px;
 	background-color: #343d46;
-	border: 10px solid #28323b;
 	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
 	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	font-size: 14pt;
+	font-size: 75%;
 	color: #F6Ca83;
-	outline: #95a5a6 solid 4px;
-
+	font-family: 'Inconsolata', monospace;	
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -162,5 +163,21 @@ a:active {
 	-moz-tab-size: 20;
 	-o-tab-size: 20;
 	tab-size: 20;
-	font-size: 12px;
+	font-size: 77%;
+	font-family: 'Inconsolata', monospace;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+	color: #d08770;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+a{
+	font-family: 'Inconsolata', monospace;
 }

@@ -1,13 +1,18 @@
 <html>
 	<head>
-		<script src="Files/jquery-3.1.0.min.js"></script>
-		<script src="https://use.fontawesome.com/fd96a89fe9.js"></script>
+		<script src="Files/js/jquery-3.1.0.min.js"></script>
 		<meta charset="UTF-8">
+		
+		<script src="https://use.fontawesome.com/fd96a89fe9.js"></script>
+		<script type="text/javascript" src="Files/js/shell.js"></script>
+		<script src="Files/js/classie.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="Files/css/page.css">
+
+		<link rel="icon" href="Files/misc/favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="Files/misc/favicon.ico" type="image/x-icon"/>
+		
 		<title>TJZimmerman.com</title>
-		<link rel="icon" href="Files/favicon.ico" type="image/x-icon"/>
-		<link rel="shortcut icon" href="Files/favicon.ico" type="image/x-icon"/>
-		<link rel="stylesheet" type="text/css" href="Files/styles.css">
-		<script type="text/javascript" src="Files/shell.js"></script>
 	</head>
 	<body>
 		<div class="pageContainer">
@@ -22,7 +27,7 @@
 					<font color="#EFF1F5"> | </font>
 					<font color="#CCD7E4"> Grand Rapids, MI </font>
 					<font color="#eff1f5">|</font>
-					<font color="#A0EcD0">(616) 214-3587</font>
+					<font color="#A0EcD0">(616) 214-3578</font>
 					<font color="#eff1f5"> | </font>
 					<font color="#F6Ca83">thomaszimmerman93@gmail.com</font>
 				</div>
@@ -34,36 +39,37 @@
 					<div class="box">
 						<div class="boxHeader" id="boxHeader1">Professional</div>
 						<ul>
-							<i style="color:#808080; size:10pt;" class="fa fa-user" <li><a href=""> About Me</a></li></i>
-							<br><i style="color:#808080; size:10pt;" class="fa fa-github" <li><a href="https://github.com/zimmertr"> GitHub</a></li></i></i>
-							<br><i style="color:#808080; size:10pt;" class="fa fa-linkedin" <li><a href="https://www.linkedin.com/in/zimmermanthomas"> LinkedIn</a></li></i>
-							<br><i style="color:#808080; size:10pt;" class="fa fa-file-text" <li><a href="http://tjzimmerman.com:2000/Files/Resume%20-%20Thomas%20Zimmerman.pdf"> Resume</a></li></i>
-							<br><i style="color:#808080; size:10pt;" class="fa fa-file-text-o" <li><a href="http://tjzimmerman.com:2000/Files/References%20-%20Thomas%20Zimmerman.pdf"> References</a></li></i>
+							<br><a class="list-group-item"  href="https://github.com/zimmertr"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a>
+							<br><a class="list-group-item"  href="https://www.linkedin.com/in/zimmermanthomas"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a>
+							<br><a class="list-group-item"  href="http://tjzimmerman.com:2000/Files/public/Resume%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>	
+							<br><a class="list-group-item"  href="http://tjzimmerman.com:2000/Files/public/References%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i> References</a>
 						</ul>
 					</div>
 					<div class="box">
 						<div class="boxHeader" id="boxHeader2">Hobby</div>
+							<div class="boxContent" id="boxContent">
 							<ul>
-								<i style="color:#808080; size:10pt;" class="fa fa-tint" <li><a href="http://tjzimmerman.com:8112/"> &nbsp&nbspDeluge</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-eye" <li><a href="http://tjzimmerman.com:8442/"> LibreNMS</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-file" <li><a href="http://tjzimmerman.com:2000/mollify"> &nbspMollify</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-cloud" <li><a href="http://tjzimmerman.com:2000/nextcloud/"> Nextcloud</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-lock" <li><a href="https://tjzimmerman.com:943/admin/"> &nbsp&nbspOpenVPN</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-film" <li><a href="https://tjzimmerman.com:32400/web/index.html"> Plex</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-area-chart" <li><a href="http://tjzimmerman.com:8445/"> PRTG</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-bar-chart" <li><a href="http://tjzimmerman.com:8441/"> SexiGraf</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-pie-chart" <li><a href="https://tjzimmerman.com:8444/ui"> vROps</a></li></i>
+								<a class="list-group-item"  href="http://tjzimmerman.com:8112"><i class="fa fa-tint fa-fw" aria-hidden="true"></i> Deluge</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:8442"><i class="fa fa-eye fa-fw" aria-hidden="true"></i> LibreNMS</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:2000/mollify"><i class="fa fa-file fa-fw" aria-hidden="true"></i> Mollify</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:2000/nextcloud"><i class="fa fa-cloud fa-fw" aria-hidden="true"></i> NextCloud</a>
+								<br><a class="list-group-item"  href="https://tjzimmerman.com:943/admin"><i class="fa fa-lock fa-fw" aria-hidden="true"></i> OpenVPN</a>
+								<br><a class="list-group-item"  href="https://tjzimmerman.com:32400/web/index.html"><i class="fa fa-film fa-fw" aria-hidden="true"></i> Plex</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:8445"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i> PRTG</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:8441"><i class="fa fa-bar-chart fa-fw" aria-hidden="true"></i> SexiGraf</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com:8444/ui"><i class="fa fa-pie-chart fa-fw" aria-hidden="true"></i> vROps</a>
 							</ul>
+							</div>
 					</div>
 					<div class="box">
 						<div class="boxHeader" id="boxHeader3">Social</div>
 							<ul>
-								<i style="color:#808080; size:10pt;" class="fa fa-wordpress" <li><a href="https://tjzimmerman.com:8440/"> Blog</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-facebook" <li><a href="https://www.facebook.com/TJZimmerman93"> &nbspFacebook</a></li></i>
-								<br><i style="color:#808080; size:10pt;" class="fa fa-instagram" <li><a href="https://www.instagram.com/zimmertr/"> Instagram</a></li></i>	
-								<br><i style="color:#808080; size:10pt;" class="fa fa-lastfm" <li><a href="https://www.last.fm/user/tsclover"> Last.FM</a></li></i>	
-								<br><i style="color:#808080; size:10pt;" class="fa fa-reddit-alien" <li><a href="https://www.reddit.com/user/zimmertr"> Reddit</a></li></i>	
-								<br><i style="color:#808080; size:10pt;" class="fa fa-twitter-square" <li><a href="https://twitter.com/zimmertr"> Twitter</a></li></i>	
+								<a class="list-group-item"  href="https://tjzimmerman.com:8440/"><i class="fa fa-wordpress fa-fw" aria-hidden="true"></i> Blog</a>
+                                                                <br><a class="list-group-item"  href="https://www.facebook.com/TJZimmerman93"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> Facebook</a>
+                                                                <br><a class="list-group-item"  href="https://www.instagram.com/zimmertr"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a>
+                                                                <br><a class="list-group-item"  href="https://www.last.fm/user/tsclover"><i class="fa fa-lastfm fa-fw" aria-hidden="true"></i> Last.fm</a>
+                                                                <br><a class="list-group-item"  href="https://www.reddit.com/user/zimmertr"><i class="fa fa-reddit-alien fa-fw" aria-hidden="true"></i> Reddit</a>
+                                                                <br><a class="list-group-item"  href="https://twitter.com/zimmertr""><i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a>
 							</ul>
 					</div>
 				</div>
