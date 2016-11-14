@@ -171,7 +171,7 @@ function handle(e){
 					document.getElementById('outbox').value += "HISTORY - Display previously executed commands.\n\nDESCRIPTION - History displays all previously executed commands that are held within your browser's local storage.\n";
 				}
 				else if (input == "man health"){
-					document.getElementById('outbox').value += "HEALTH - Query a host for it's health information.\n\nDESCRIPTION - Health queries a host located on the domain for health information including  cpu, memory, load, swap, logged in system users, running system processes, and the system uptime.\n\nSTRUCTURE - health [hostname]\n\nHINT - Try `health mimas` to see an example.\n";
+					document.getElementById('outbox').value += "HEALTH - Query a host for its health information.\n\nDESCRIPTION - Health queries a host located on the domain for health information including  cpu, memory, load, swap, logged in system users, running system processes, and the system uptime.\n\nSTRUCTURE - health [hostname]\n\nHINT - Try `health mimas` to see an example.\n\nWARNING - Command may take a long time and your browser may momentarily freeze.\n";
 				}
 				else if (input == "man ifconfig"){
 					document.getElementById('outbox').value += "IFCONFIG - Return network information about the server.\n\nDESCRIPTION - Ifconfig queries the server for information relating to it's network configuraiton. Displays the server's IP Address, domain, protocol, port, and relative path.\n";
@@ -186,7 +186,7 @@ function handle(e){
 					document.getElementById('outbox').value += "PING - Ping a domain.\n\nDESCRIPTION - The ping utility uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.\n\nSTRUCTURE - ping [hostname|ip address]\n";
 				}
 				else if (input == "man status"){
-					document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to resolve a TCP connection to each of servers hosted on tjzimmerman.com If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value.\n";
+					document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to resolve a TCP connection to each of servers hosted on tjzimmerman.com If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value..\n\nWARNING - Command may take a long time and your browser may momentarily freeze.\n";
 				}
 				else if (input == "man weather"){
 					document.getElementById('outbox').value += "WEATHER - Return the current weather at the location of the server.\n\nDESCRIPTION - The weather utility queries a python script, weatherpy, for the current forceast of the location of the server. Provided information includes temperature in fahrenheit and celsius, sky conditions, wind direction, speed, and gust speed, and the relative humidity.\n";
