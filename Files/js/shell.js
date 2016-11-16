@@ -1,4 +1,5 @@
 var commands = [
+	["about:\t", "Return information about myself."],
         ["clear:\t", "Clear the text area."],
         ["echo:\t", "Write arguements to the standard output."],
 	["health:\t", "Query a specific server for its health information."],
@@ -52,6 +53,13 @@ function handle(e){
 				document.getElementById('outbox').value = "";
 			}
 			
+			else if (input == "about"){
+				var output = "";
+				
+				document.getElementById('outbox').value += "root@tjsh> " + input + "\n";
+			
+				document.getElementById('outbox').value += "Linux is my means, scripting is my prose, and homelabbing is my craft. I am a maker, poet, and technophile.\n\n100% uptime is imperative. Routine tasks should be automated. An infrastructure without monitoring is an emergency and if you don't feel terror when you receive an email alert your notifications are not configured correctly.\n\nI look at learning new technologies as a challenge, and I am the defier. I have an uncanny ability to rapidly learn on my own, a dedication to self education, and a fondness for FOSS.\n\nMy name is Thomas Zimmerman and I am a DevOps engineer. I have been a technology enthusiast since I was a child and I have been using Linux daily since I was 15. My OS of choice has changed many times but not since I've found Arch.\n";
+			}
 
 			else if(input.startsWith("echo")){
 				var output = "";
@@ -158,6 +166,9 @@ function handle(e){
                                                 document.getElementById('outbox').value += "-tjsh: command not found: " + input + "\n";
                                         }
                                 }
+				else if (input == "man about"){
+					document.getElementById('outbox').value += "ABOUT - Returns information about me.\n\nDESCRIPTION - About returns my personal biography to the screen.\n";
+				}
 				else if (input == "man clear"){
 					document.getElementById('outbox').value += "CLEAR - Clear the text area.\n\nDESCRIPTION - Clear clears your screen if this is possible, including its scrollback buffer. Clear does not accept any arguements.\n";
 				}
