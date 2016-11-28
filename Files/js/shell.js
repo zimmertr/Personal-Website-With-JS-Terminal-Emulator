@@ -32,7 +32,8 @@ function handle(e){
 
 
 	if(e.keyCode === 13){ //If return key is pressed
-			event.preventDefault(); //prevent page from refreshing when submission is made
+			//event.preventDefault(); //prevent page from refreshing when submission is made
+			e.preventDefault();
 			var input=document.getElementById('shell').value
 			prevCom=input;
 		
