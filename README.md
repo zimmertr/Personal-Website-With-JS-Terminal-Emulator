@@ -14,8 +14,8 @@ Each command has an included manpage. Some of my favorite commands are `health` 
 
 
 Requirements to run:
--A webserver (Using Apache)
--php (For scripts to run)
--Provided scripts placed in /usr/lib/cgi-bin/
--weatherpy: https://github.com/cmcdowell/weatherpy
--Cronjob to update weather every minute: * * * * * /usr/lib/cgi-bin/getWeather.sh
+  -A webserver (Using Apache)
+  -php (For scripts to run)
+  -Provided scripts placed in /usr/lib/cgi-bin/
+  -weatherpy: https://github.com/cmcdowell/weatherpy
+  -Cronjob to update weather every minute: * * * * * /usr/lib/cgi-bin/getWeather.sh
