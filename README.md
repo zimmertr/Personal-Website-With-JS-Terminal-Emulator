@@ -13,7 +13,7 @@ On this webpage, you'll find an interactive terminal emulator that I have built.
 Each command has an included manpage. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their health stats and `Status` can be used to see the up/down status of each of my servers. 
 
 
-Requirements to run:
+Requirements to run:  
 -A webserver (Using Apache)  
 -php (For scripts to run)  
 -Provided scripts placed in /usr/lib/cgi-bin/  
