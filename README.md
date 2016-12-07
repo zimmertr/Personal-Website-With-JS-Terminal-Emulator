@@ -1,5 +1,7 @@
 #Website With JS Terminal Emulator
 
+LIVE DEMO: https://tjzimmerman.com
+
 This repository contains the source code for my personal website. It is principly written in Javascript but also utilizes BASH, HTML5, and CSS. 
 
 I made this website in an attempt to learn Javascript, but also to make my personal resume website better.
