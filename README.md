@@ -6,7 +6,7 @@ I made this website in an attempt to learn Javascript, but also to make my perso
 
 On this webpage, you'll find an interactive terminal emulator that I have built. It doesn't have an artificial filesystem attached to it, but it supports a series of cool commands.
 
-![Alt text](https://raw.githubusercontent.com/zimmertr/Website-With-JS-Terminal-Emulator/Files/screenshot.png "Terminal Emulator")
+![Alt text](https://raw.githubusercontent.com/zimmertr/Website-With-JS-Terminal-Emulator/blob/master/Files/screenshot.png "Terminal Emulator")
 
 Each command has an included manpage. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their health stats and `Status` can be used to see the up/down status of each of my servers. 
 
