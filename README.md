@@ -10,7 +10,7 @@ On this webpage, you'll find an interactive terminal emulator that I have built.
 
 ![Alt text](https://raw.githubusercontent.com/zimmertr/Website-With-JS-Terminal-Emulator/master/Files/screenshot.png "Terminal Emulator")
 
-Each command has an included manpage. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their health stats and `Status` can be used to see the up/down status of each of my servers. 
+Each command has an included manpage. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their health stats and `Status` can be used to see the up/down status of each of my servers. For example, try executing `health mimas`. (Mimas is the hostname of one of my internal servers.) 
 
 
 Requirements to run:  
