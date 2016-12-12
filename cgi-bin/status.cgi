@@ -16,7 +16,7 @@ echo
 </dev/tcp/184.75.155.33/32400 && printf "Plex:\t\tUp\n" || printf "Plex:\t\tDown\n"
 </dev/tcp/janus.sol.milkyway/8181 && printf "PlexPy:\t\tUp\n" || printf "PlexPy:\t\tDown\n"
 </dev/tcp/io.sol.milkyway/8080 && printf "PRTG:\t\tUp\n" || printf "PRTG:\t\tDown\n"
-</dev/tcp/deimos.sol.milkyway/8080 && printf "RancherOS:\t\tUp\n" || printf "RancherOS:\t\tDown\n"
+</dev/tcp/triton.sol.milkyway/8080 && printf "Rancher:\t\tUp\n" || printf "RancherOS:\t\tDown\n"
 </dev/tcp/phobos.sol.milkyway/3000 && printf "Rocket.Chat:\t\tUp\n" || printf "Rocket.Chat:\t\tDown\n"
 </dev/tcp/ymir.sol.milkyway/8441 && printf "SexiGraf:\t\tUp\n" || printf "SexiGraf:\t\tDown\n"
 </dev/tcp/janus.sol.milkyway/8081 && printf "SickRage:\t\tUp\n" || printf "SickRage:\t\tDown\n"
