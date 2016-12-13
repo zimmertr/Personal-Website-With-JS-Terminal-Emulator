@@ -1,7 +1,7 @@
 var commands = [
 	["about:\t", "Return information about myself."],
         ["clear:\t", "Clear the text area."],
-        ["echo:\t", "Write arguements to the standard output."],
+        ["echo:\t", "Write arguments to the standard output."],
 	["health:\t", "Query a specific server for its health information."],
         ["help:\t", "List all tjsh commands to the standard output."],
         ["history:\t", "Display previously executed commands."],
