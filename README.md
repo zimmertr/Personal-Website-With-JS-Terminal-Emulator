@@ -63,7 +63,9 @@ There are a ton of things that I would like to add to this project in the future
 
 - Adding a popup window to display information about me for users who come to the website without shell-proficiency who are also looking to learn about me. 
 
-- Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.   
+- Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
+
+- Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`
 
 ##Requirements to run:  
 - A webserver  
