@@ -55,11 +55,17 @@ There are a ton of things that I would like to add to this project in the future
 
 ```
 - Merging the shell prompt and the outbput box into a single field to better mimic the aesthetic of a true terminal shell.  
+
 - Adding in a `wait` JS clause into the `health` and `status` commands so that the page doesn't freeze while executing commands that take several seconds. 
+
 - Penetration testing and better security methodologies. Including sanitization and encryption of input/output.  
+
 - Expanding local storage to create an artifical `filesystem` so that I can support commands like `ls`, `touch`, `mkdir`, `cat`, `echo`, etc.
+
 - Adding a popup window to display information about me for users who come to the website without shell-proficiency who are also looking to learn about me. 
+
 - Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
+
 - Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
 ```
 
