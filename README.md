@@ -53,21 +53,19 @@ It should be. No commands sent to the terminal emulator are executed locally. In
 
 There are a ton of things that I would like to add to this project in the future. But the goal of the project was only ever to learn javascript and to improve my website so I have since halted development in favor of focusing my energy on learning other technologies. Some ideas I have for improvement are:
 
-```
-- Merging the shell prompt and the outbput box into a single field to better mimic the aesthetic of a true terminal shell.  
+1. Merging the shell prompt and the outbput box into a single field to better mimic the aesthetic of a true terminal shell.  
 
-- Adding in a `wait` JS clause into the `health` and `status` commands so that the page doesn't freeze while executing commands that take several seconds. 
+2. Adding in a `wait` JS clause into the `health` and `status` commands so that the page doesn't freeze while executing commands that take several seconds. 
 
-- Penetration testing and better security methodologies. Including sanitization and encryption of input/output.  
+3. Penetration testing and better security methodologies. Including sanitization and encryption of input/output.  
 
-- Expanding local storage to create an artifical `filesystem` so that I can support commands like `ls`, `touch`, `mkdir`, `cat`, `echo`, etc.
+4. Expanding local storage to create an artifical `filesystem` so that I can support commands like `ls`, `touch`, `mkdir`, `cat`, `echo`, etc.
 
-- Adding a popup window to display information about me for users who come to the website without shell-proficiency who are also looking to learn about me. 
+5. Adding a popup window to display information about me for users who come to the website without shell-proficiency who are also looking to learn about me. 
 
-- Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
+6. Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
 
-- Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
-```
+7. Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
 
 ##Requirements to run:  
 ```
