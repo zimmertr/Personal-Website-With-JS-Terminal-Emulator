@@ -1,4 +1,1 @@
-Weather for Grand Rapids, MI
-Currently: 63.5°F (17.5°C) Partly Cloudy
-Wind: Calm
-Humidity: 80%
+

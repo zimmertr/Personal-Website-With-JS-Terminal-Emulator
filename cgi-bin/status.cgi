@@ -58,6 +58,9 @@ down=-1
 </dev/tcp/luna.sol.milkyway/80 && printf "Pi-Hole:\t\tUp\n" || printf "Pi-Hole:\t\tDown\n"
 </dev/tcp/luna.sol.milkyway/80 && let up++ || let down++
 
+</dev/tcp/luna.sol.milkyway/53 && printf "Pi-Hole DNS:\t\tUp\n" || printf "Pi-Hole DNS:\t\tDown\n"
+</dev/tcp/luna.sol.milkyway/53 && let up++ || let down++
+
 </dev/tcp/24.17.195.62/32400 && printf "Plex:\t\tUp\n" || printf "Plex:\t\tDown\n"
 </dev/tcp/24.17.195.62/32400 && let up++ || let down++
 
