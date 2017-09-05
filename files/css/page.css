@@ -40,7 +40,8 @@ body {
 .underline {
 	margin: 0 auto;	
 	border-bottom: 1px solid #eff1f5;
-	width: 675px;
+	padding-top: 3px;
+	width: 60%;
 }
 
 .boxContainer {
