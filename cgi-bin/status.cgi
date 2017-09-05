@@ -28,6 +28,9 @@ down=-1
 </dev/tcp/24.17.195.62/8112 && printf "Deluge:\t\tUp\n" || printf "Deluge:\t\tDown\n"
 </dev/tcp/24.17.195.62/8112 && let up++ || let down++
 
+</dev/tcp/24.17.195.62/7852 && printf "Deluge Traffic:\t\tUp\n" || printf "Deluge Traffic:\t\tDown\n"
+</dev/tcp/24.17.195.62/7852 && let up++ || let down++
+
 </dev/tcp/saturn.sol.milkyway/443 && printf "ESXi:\t\tUp\n" || printf "ESXi:\t\tDown\n"
 </dev/tcp/saturn.sol.milkyway/443  && let up++ || let down++
 
@@ -36,6 +39,9 @@ down=-1
 
 </dev/tcp/rp.tjzimmerman.com/443 && printf "Netdata RP:\t\tUp\n" || printf "Netdata RP:\t\tDown\n"
 </dev/tcp/rp.tjzimmerman.com/443  && let up++ || let down++
+
+</dev/tcp/tjzimmerman.com/443 && printf "NGINX:\t\tUp\n" || printf "NGINX:\t\tDown\n"
+</dev/tcp/tjzimmerman.com/443 && let up++ || let down++
 
 </dev/tcp/24.17.195.62/943 && printf "OpenVPN:\t\tUp\n" || printf "OpenVPN:\t\tDown\n"
 </dev/tcp/24.17.195.62/943 && let up++ || let down++

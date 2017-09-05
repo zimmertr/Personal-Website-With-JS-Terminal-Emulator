@@ -198,7 +198,7 @@ function handle(e){
 					document.getElementById('outbox').value += "PING - Ping a domain.\n\nDESCRIPTION - The ping utility uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway.\n\nSTRUCTURE - ping [hostname|ip address]\n";
 				}
 				else if (input == "man status"){
-					document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to resolve a TCP connection to each of servers hosted on tjzimmerman.com If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value..\n\nWARNING - Command may take a long time and your browser may momentarily freeze.\n";
+					document.getElementById('outbox').value += "STATUS - Returns health of servers.\n\nDESCRIPTION - The status utility attempts to establish a network connection to each of servers hosted in the Sol.Milkyway domain. If a server is detected as up, it will return an UP value. Likewise, if a server is detected as down, it will return a DOWN value. At the end, a cumulative Up/Down server count is displayed.\n\nWARNING - Command may take a long time to finish executing if services are down. \n";
 				}
 				else if (input == "man weather"){
 					document.getElementById('outbox').value += "WEATHER - Return the current weather at the location of the server.\n\nDESCRIPTION - The weather utility queries a python script, weatherpy, for the current forceast of the location of the server. Provided information includes temperature in fahrenheit and celsius, sky conditions, wind direction, speed, and gust speed, and the relative humidity.\n";
