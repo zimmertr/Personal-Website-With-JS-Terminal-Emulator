@@ -67,6 +67,8 @@ There are a ton of things that I would like to add to this project in the future
 
 7. Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
 
+8. Discovered bug with nslookup. When entry not found, result passed back is not null. But rather "Can't find...". Fail clause for command is prepared for null and, therefore, will never display. 
+
 ## Requirements to run:  
 ```
 - A webserver  
