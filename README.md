@@ -72,6 +72,6 @@ There are a ton of things that I would like to add to this project in the future
 - A webserver  
 - PHP (For the execution of provided CGI scripts)  
 - Provided CGI scripts placed in /usr/lib/cgi-bin/  
-- weatherpy: https://github.com/cmcdowell/weatherpy (For obtaining weather information)
+- weatherpy: https://github.com/JackWink/Weather (For obtaining weather information)
 - Cronjob to update weather every minute: * * * * * /usr/lib/cgi-bin/getWeather.sh
 ```
