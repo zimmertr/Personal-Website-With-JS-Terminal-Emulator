@@ -228,8 +228,12 @@ function handle(e){
 					req.open('GET', '/cgi-bin/nslookup.cgi?'+ hostname, false);
 					req.send(null);		
 					
-					if (req.responseText == ""){
-						document.getElementById('outbox').value += "Domain or IP not found in namserver.\n";
+					//The following condition is untested. At present time nslookup never returns null as a response. Which means the if/else if functionality is untested.
+					if (req.responseText == "" && hostname.includes(".")){
+						document.getElementById('outbox').value += "Domain or IP not found in internal namserver.\n";
+					}
+					else if (req.responseText == "" && !hostname.includes(".")){
+						document.getElementById('outbox').value += "Domain or IP not found in namserver. Did you forget to provide a TLD?\n";
 					}
 					else{			
 						document.getElementById('outbox').value += req.responseText;	
