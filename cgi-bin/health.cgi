@@ -4,8 +4,8 @@ echo "Content-type: text"
 echo
 
 
-comstring=$(nslookup $QUERY_STRING | tail -n 2 | awk '{print $2}')
-
+#comstring=$(nslookup $QUERY_STRING | tail -n 2 | awk '{print $2}')
+comstring="sol.milkyway"
 #############
 #Check to see if the query string exists in your DNS
 ############
