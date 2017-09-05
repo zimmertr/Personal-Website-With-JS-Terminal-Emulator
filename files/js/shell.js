@@ -255,8 +255,11 @@ function handle(e){
 						req.open('GET', '/cgi-bin/ping.cgi?' + hostname, false);
 						req.send(null);
 
-						if (req.responseText == ""){
-							document.getElementById('outbox').value += "Domain or IP not found in nameserver.\n";
+						if (req.responseText == "" && hostname.includes(".")){
+							document.getElementById('outbox').value += "Domain or IP not found in internal nameserver.\n";
+						}
+						else if (req.responseText == "" && !hostname.includes(".")){
+							document.getElementById('outbox').value += "Domain or IP not found in nameserver. Did you forget to provide a TLD?\n";
 						}
 						else{
 							document.getElementById('outbox').value += req.responseText;
