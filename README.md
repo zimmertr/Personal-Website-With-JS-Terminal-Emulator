@@ -71,6 +71,8 @@ There are a ton of things that I would like to add to this project in the future
 
 9. Allow `health` to accept a second parameter so that a community string can be passed.
 
+10. Make `weather` command perform API call on demand. Rather than on a cron. So as to alleviate load on Wundergroun's Server.
+
 ## Requirements to run:  
 ```
 - A webserver  
