@@ -69,6 +69,8 @@ There are a ton of things that I would like to add to this project in the future
 
 8. Discovered bug with nslookup. When entry not found, result passed back is not null. But rather "Can't find...". Fail clause for command is prepared for null and, therefore, will never display. 
 
+9. Allow `health` to accept a second parameter so that a community string can be passed.
+
 ## Requirements to run:  
 ```
 - A webserver  
