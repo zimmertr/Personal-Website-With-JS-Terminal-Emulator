@@ -49,6 +49,13 @@ After a command is executed in the shell, the terminal enters its `cleanup` phas
 
 It should be. No commands sent to the terminal emulator are executed locally. Instead, they are matched against a whitelist of supported commands. If a match is found, a separate script is then chainloaded by the server to execute the desired function and the output of the script is then sent back to the server to be displayed on the webpage. If anyone wants to help me with pentesting or XSS I would really appreciate the opportunity for a learning experience. Feel free to email me at tj@tjzimmerman.com if interested.
 
+## Mobile website
+
+If you haven't seen the Family Guy .gif poking fun at CSS with Peter adjusting the blinds on a window, you should go Google it now. I won't pretend to be a web developer, so my CSS is pretty lousy. I've tried my best to make this website mobile friendly but it is still less dynamic than desired. Much help would be appreciated in this area. 
+
+
+![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot_mobile.png "Terminal Emulator - Mobile")
+
 ## Plans for future improvement
 
 There are a ton of things that I would like to add to this project in the future. But the goal of the project was only ever to learn javascript and to improve my website so I have since halted development in favor of focusing my energy on learning other technologies. Some ideas I have for improvement are:
