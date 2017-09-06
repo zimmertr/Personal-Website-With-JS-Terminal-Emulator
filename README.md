@@ -1,21 +1,21 @@
 # Personal Website With JS Terminal Emulator
 
-## LIVE DEMO: https://tjzimmerman.com
+__LIVE DEMO:__ https://tjzimmerman.com
 
 ## Summary
-This repository contains the source code for my personal website. It is principally written in Javascript but also utilizes BASH, HTML5, and CSS. I made this website in an attempt to learn Javascript, but also to make my personal resume website better.
+This website is mostly written in Javascript. But also utilizes BASH, Perl, and Python in the backend. I made this website in an attempt to learn Javascript, but also to make my personal resume website better. In retrospective it's a little ghastly that I chose to use cgi scripts for the backend legwork. I recognize now that a web API would have been a much better design. A future rewrite may, perhaps, include that revision.
 
-On this webpage, you'll find an interactive terminal emulator that I have built that supports a dozen cool commands meant to mimic the functionality of a UNIX system. You'll also find several sections devoted to links pertaining to me for the Professional, Hobby, and Social aspects of my life. 
+On my website, you'll find an interactive terminal emulator that supports a dozen commands intended to mimic the functionality of a Linux terminal. You'll also find several sections devoted to links about my online presences. 
 
-The vertical size of the terminal output box can be adjusted by dragging the bottom right corner up and down. This is useful for viewing the contents of the terminal after running multiple commands or commands with large amount of output.
+The vertical size of the terminal output box can be adjusted by dragging the bottom right corner up and down. This is useful for viewing the contents of the terminal after running multiple commands or commands with large amount of output, such as `status`.
 
 ![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot.png "Terminal Emulator")
 
 
 ## Terminal Command Information
-Each command has an included manpage. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their health stats and `Status` can be used to see the up/down status of each of my servers. For example, try executing `health mimas`. (Mimas is the hostname of one of my internal servers.)
+Each command has an included manpage that can be accessed with `man >command<`. Some of my favorite commands are `health` and `status`. `Health` can be used to query my internal servers for their system & resource information and `Status` can be used to evaluate the up/down status of each of my servers. For example, try executing `health janus`. (Janus is the hostname of one of my internal servers.)
 
-Full list of supported commands:
+*Full list of supported commands:*
 
 | Command   | Short Description                              |
 |:---------:| ---------------------------------------------- |
@@ -35,46 +35,46 @@ Full list of supported commands:
 
 ## How does it work?
 
-The website is mostly powered by Javascript as it was an excersise to learn Javascript. The primary Javascript file that runs the terminal emulator is called `shell.js` and is located in `/File/js/shell.js`.
+An event handler listens for a `return/enter` keypress. When a string is sent to the terminal, it is stored in a variable and compared against a whitelist of commands. If a match is found, the application executes the command with whatever parameters are provided. Basic error handling for PEBKAC & server-side issues has been included. Additionally the browser's `local storage` is leveraged to retain a temporary archive if historically executed commands.
 
-The website utilizes  an event handler that listens for an `enter` keypress, your browser's local storage to remember your personal terminal history, and an array of supported commands and their descriptions. 
+Commands that require communication with the internal network do so by chainloading BASH scripts. These scripts were all written to perform some Linux magic to obtain the desired metrics. These files can be found in the `cgi-bin` folder. I've attempted to document them, however some parts may prove difficult to read. 
 
-When a string is sent to the terminal, it is stored as a string which is then compared against strings to represent supported commands. If a match is found, the terminal executes the command with whatever parameters are provided. If an error is made in typing the command or giving a parameter, the terminal will show an appropriate error response for the user. 
+After a command is executed, the terminal enters its `cleanup` phase. This is used to scroll the output box to the end STDOUT in case it takes up more lines than the terminal has available. An empty line is added after the command is ran, and the shell prompt area is cleared of the previous command. 
 
-Commands that interact directly with internal servers do so by chainloading CGI scripts which function as bash scripts that execute on remote servers. These files can be found in the `cgi-bin` folder in the repository. There is a different script for each command that requires one. All CGI scripts are written using BASH. 
-
-After a command is executed in the shell, the terminal enters its `cleanup` phase. This is used to scroll the output box to the end of the output of the command in case it takes up more space than the terminal has. An empty line is added after the command is ran, and the shell prompt area is cleared of the previous command. 
 
 ## Is this safe?
 
-It should be. No commands sent to the terminal emulator are executed locally. Instead, they are matched against a whitelist of supported commands. If a match is found, a separate script is then chainloaded by the server to execute the desired function and the output of the script is then sent back to the server to be displayed on the webpage. If anyone wants to help me with pentesting or XSS I would really appreciate the opportunity for a learning experience. Feel free to email me at tj@tjzimmerman.com if interested.
+It should be. No commands are executed locally. Instead, they are matched against a whitelist of supported commands. If a match is found, a separate script is then chainloaded by the server and the output is sent back to the server. If anyone wants to help me with pentesting or XSS I would really appreciate the opportunity for a learning experience. Feel free to email me at tj@tjzimmerman.com if interested.
+
 
 ## Mobile website
 
 If you haven't seen the Family Guy .gif poking fun at CSS with Peter adjusting the blinds on a window, you should go Google it now. I won't pretend to be a web developer, so my CSS is pretty lousy. I've tried my best to make this website mobile friendly but it is still less dynamic than desired. Much help would be appreciated in this area. 
 
-
 ![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot_mobile.png "Terminal Emulator - Mobile")
+
 
 ## Plans for future improvement
 
-There are a ton of things that I would like to add to this project in the future. But the goal of the project was only ever to learn javascript and to improve my website so I have since halted development in favor of focusing my energy on learning other technologies. Some ideas I have for improvement are:
+There are a ton of things that I would like to add to this project in the future. But the goal of the project was only ever to learn javascript and to improve my website so I have since halted development.
+
+_Some ideas I have for improvement are:_
 
 1. Merging the shell prompt and the outbput box into a single field to better mimic the aesthetic of a true terminal shell.  
 
-2. Adding in a `wait` JS clause into the `health` and `status` commands so that the page doesn't freeze while executing commands that take several seconds. 
+2. Making commands async to the browser to avoid page hangs.
 
-3. Penetration testing and better security methodologies. Including sanitization and encryption of input/output.  
+3. Penetration testing. Including sanitization and encryption of input/output.  
 
-4. Expanding local storage to create an artifical `filesystem` so that I can support commands like `ls`, `touch`, `mkdir`, `cat`, `echo`, etc.
+4. Expanding local storage to create an artifical `filesystem` so that I can support commands like `ls`, `touch`, `mkdir`, & `cat`.
 
-5. Adding a popup window to display information about me for users who come to the website without shell-proficiency who are also looking to learn about me. 
+5. Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
 
-6. Writing my own weather script to query NOAA so that I don't have to rely on weatherpy.  
+6. Migration from leveraging CGI scripts in the backend to a full web API for my domain. More secure, dynamic, and efficient.
 
-7. Loading indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
+7. Progress indication for commands that take several seconds to execute. Such as incrememntal dots. `. . . .`|
 
-8. Discovered bug with nslookup. When entry not found, result passed back is not null. But rather "Can't find...". Fail clause for command is prepared for null and, therefore, will never display. 
+8. Fix bug with nslookup where an entry not found and the result passed back is not null. But rather "Can't find...". Fail clause for command is prepared for null and, therefore, will never display. 
 
 9. Allow `health` to accept a second parameter so that a community string can be passed.
 
@@ -83,6 +83,7 @@ There are a ton of things that I would like to add to this project in the future
 11. Make `echo` trim off double quotes when a message is echoed like such: echo "test". Current output would be "test" instead of test.
 
 12. Error handling for `health` isn't perfect. Try executing `healthd janus` for example. I don't even know how to describe why it's like that.
+
 
 ## Requirements to run:  
 ```
