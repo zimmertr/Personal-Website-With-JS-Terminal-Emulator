@@ -15,7 +15,8 @@ body {
 	position: relative;
 	top: 45%;
 	transform: translateY(-50%);
-	width: 50%;
+	width: 100%;
+	max-width: 1050px;
 	margin: auto;
 }
 
@@ -47,37 +48,40 @@ body {
 .boxContainer {
 	display: table;
 	width: 100%;
+	max-width: 750px;
+	margin: auto;
 	border-spacing: 26px;
-	padding-top: 20px;
+#	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
 .box {
 	display: table-cell;
 	width: 33.3%;
-	height: 200px;
+	height: 70px;
 	text-align: center;
 	background-color: #343d46;
-	padding: 10px;
-	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	padding-top: 20px;
-	font-size: 90%;
+	padding: 5px;
+	-webkit-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
+	padding-top: 10px;
 }
 
 .boxContent{
+#Add columns
 #	-webkit-columns: 2; /* Chrome, Safari, Opera */
 #	-moz-columns: 2; /* Firefox */
 #	columns: 2;
+	font-size: 80%;
 }
 
 .boxHeader {
-	font-size: 14pt;
+	font-size: 110%;
 	text-align: center;
 	vertical-align: middle;
 	height: 22px;
 	color: #343d46;
-	font-weight: 500;
+	font-weight: 540;
 }
 
 #boxHeader1 {
@@ -127,14 +131,15 @@ ul {
 
 .searchInput {
 	width: 100%;
+	max-width: 700px;
 	border: none;
 	margin: auto;
 	display: block;
 	padding: 5px 5px;
 	background-color: #343d46;
-	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
-	font-size: 75%;
+	-webkit-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
+	font-size: 70%;
 	color: #F6Ca83;
 	font-family: 'Inconsolata', monospace;	
 }
@@ -161,10 +166,10 @@ a:active {
 }
 #outbox{
 	resize: vertical;
-	-moz-tab-size: 20;
-	-o-tab-size: 20;
-	tab-size: 20;
-	font-size: 77%;
+	-moz-tab-size: 25;
+	-o-tab-size: 25;
+	tab-size: 25;
+	font-size: 70%;
 	font-family: 'Inconsolata', monospace;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active a {

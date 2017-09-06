@@ -40,13 +40,15 @@
 				<div class="boxContainer">
 					<div class="box">
 						<div class="boxHeader" id="boxHeader1">Professional</div>
-						<ul>
-							<a class="list-group-item"  href="https://github.com/zimmertr"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a>
-							<br><a class="list-group-item"  href="https://www.linkedin.com/in/zimmermanthomas"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a>
-							<br><a class="list-group-item"  href="http://tjzimmerman.com/files/public/Resume%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>	
-							<br><a class="list-group-item"  href="https://tjzimmerman.com/files/public/Professional%20Portfolio%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i> Portfolio</a>
-							<br><a class="list-group-item"  href="http://tjzimmerman.com/files/public/References%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i> References</a>
-						</ul>
+							<div class="boxContent" id="boxContent">
+							<ul>
+								<a class="list-group-item"  href="https://github.com/zimmertr"><i class="fa fa-github fa-fw" aria-hidden="true"></i> GitHub</a>
+								<br><a class="list-group-item"  href="https://www.linkedin.com/in/zimmermanthomas"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com/files/public/Resume%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i> Resume</a>	
+								<br><a class="list-group-item"  href="https://tjzimmerman.com/files/public/Professional%20Portfolio%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-pdf-o fa-fw" aria-hidden="true"></i> Portfolio</a>
+								<br><a class="list-group-item"  href="http://tjzimmerman.com/files/public/References%20-%20Thomas%20Zimmerman.pdf"><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i> References</a>
+							</ul>
+							</div>
 					</div>
 					<div class="box">
 						<div class="boxHeader" id="boxHeader2">Homelab</div>
@@ -57,20 +59,22 @@
                                                                 <br><a class="list-group-item" href="https://tjzimmerman.com/nextcloud"><i class="fa fa-cloud fa-fw" aria-hidden="true"></i> Nextcloud</a>
                                                                 <br><a class="list-group-item"  href="https://vpn.tjzimmerman.com"><i class="fa fa-server fa-fw" aria-hidden="true"></i> OpenVPN</a>
                                                                 <br><a class="list-group-item"  href="https://deluge.tjzimmerman.com"><i class="fa fa-tint fa-fw" aria-hidden="true"></i> Deluge</a>
-                                                                <br><a class="list-group-item"  href="https://rp.tjzimmerman.com"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i> RP Netdata</a>
+                                                                <br><a class="list-group-item"  href="https://rp.tjzimmerman.com"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i> Netdata</a>
 								
 							</ul>
 							</div>
 					</div>
 					<div class="box">
-						<div class="boxHeader" id="boxHeader3">Social</div>
-							<ul>
-                                                                <a class="list-group-item"  href="https://www.facebook.com/TJZimmerman93"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> Facebook</a>
-                                                                <br><a class="list-group-item"  href="https://www.instagram.com/zimmertr"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a>
-                                                                <br><a class="list-group-item"  href="https://www.last.fm/user/tsclover"><i class="fa fa-lastfm fa-fw" aria-hidden="true"></i> Last.fm</a>
-                                                                <br><a class="list-group-item"  href="https://twitter.com/zimmertr"><i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a>
-                                                                <br><a class="list-group-item"  href="https://tjzimmerman.com/files/public/"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i> Public Files</a>
-							</ul>
+							<div class="boxHeader" id="boxHeader3">Social</div>
+								<div class="boxContent" id="boxContent">
+								<ul>
+									<a class="list-group-item"  href="https://www.facebook.com/TJZimmerman93"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> Facebook</a>
+									<br><a class="list-group-item"  href="https://www.instagram.com/zimmertr"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a>
+									<br><a class="list-group-item"  href="https://www.last.fm/user/tsclover"><i class="fa fa-lastfm fa-fw" aria-hidden="true"></i> Last.fm</a>
+									<br><a class="list-group-item"  href="https://twitter.com/zimmertr"><i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a>
+									<br><a class="list-group-item"  href="https://tjzimmerman.com/files/public/"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i> Files</a>
+								</ul>
+								</div>
 					</div>
 				</div>
 				
@@ -79,7 +83,7 @@
 						
 						<input id="shell" class="searchInput" type="text" autocomplete="off" name="shell" autofocus onkeypress="handle(event)" placeholder="root@tjsh >" />
 						<br>
-						<textarea id="outbox" class="searchInput" rows="20" readonly name="outbox" placeholder="Type 'help' to see a list of supported commands. Each command has a dedicated manpage."></textarea>
+						<textarea id="outbox" class="searchInput" rows="25" readonly name="outbox" placeholder="Type 'help' to see a list of supported commands. Each command has a dedicated manpage."></textarea>
 					</form>
 				</div>
 			</div>
