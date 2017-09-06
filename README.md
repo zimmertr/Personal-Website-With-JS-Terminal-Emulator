@@ -9,7 +9,7 @@ On this webpage, you'll find an interactive terminal emulator that I have built 
 
 The vertical size of the terminal output box can be adjusted by dragging the bottom right corner up and down. This is useful for viewing the contents of the terminal after running multiple commands or commands with large amount of output.
 
-![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/Files/screenshot.png "Terminal Emulator")
+![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot.png "Terminal Emulator")
 
 
 ## Terminal Command Information
