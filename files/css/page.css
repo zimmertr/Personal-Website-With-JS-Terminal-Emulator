@@ -14,8 +14,7 @@ body {
 
 .vertAlign {
 	position: relative;
-	top: 5%;
-#	transform: translateY(-50%);
+	top: 10%;
 	width: 100%;
 	max-width: 1050px;
 	margin: auto;
