@@ -14,11 +14,11 @@ body {
 
 .vertAlign {
 	position: relative;
-	top: 45%;
-	transform: translateY(-50%);
-	width: 100%;
-	max-width: 1050px;
-	margin: auto;
+	top: 5%;
+#	transform: translateY(-50%);
+#	width: 100%;
+#	max-width: 1050px;
+#	margin: auto;
 }
 
 .header {
@@ -36,14 +36,14 @@ body {
 	vertical-align: middle;
 	margin: auto;
 	color: #d08770;
-	padding-bottom: 7px;
+	padding-bottom: 5px;
 }
 
 .underline {
 	margin: 0 auto;	
 	border-bottom: 1px solid #eff1f5;
-	padding-top: 3px;
-	width: 60%;
+	width: 70%;
+	max-width: 650px;
 }
 
 .boxContainer {
@@ -52,7 +52,6 @@ body {
 	max-width: 750px;
 	margin: auto;
 	border-spacing: 26px;
-#	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
@@ -66,6 +65,12 @@ body {
 	-webkit-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
 	-moz-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.6);
 	padding-top: 10px;
+	border-style: groove;
+	border-width: 1px;
+	border-color: black;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: auto;
 }
 
 .boxContent{
@@ -143,6 +148,9 @@ ul {
 	font-size: 70%;
 	color: #F6Ca83;
 	font-family: 'Inconsolata', monospace;	
+	border-style: groove;
+	border-width: 1px;
+	border-color: black;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
