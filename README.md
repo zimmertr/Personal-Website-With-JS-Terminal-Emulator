@@ -5,7 +5,9 @@ __LIVE DEMO:__ https://tjzimmerman.com
 ## Summary
 This Web Application is mostly written in Javascript. But also utilizes BASH, Perl, and Python in the backend. I made it both in an attempt to learn Javascript and to improve my personal website. In retrospective it was a poor decision to to use cgi scripts in the backend. I recognize now that a web API would have been a much better design. A future rewrite may, perhaps, include that revision. 
 
-![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot.png "Terminal Emulator")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot.png" height="500">
+</p>
 
 
 ## Terminal Command Information
@@ -55,8 +57,9 @@ I _think_ so. Any commands that interact with my internal network are matched ag
 
 If you haven't seen the Family Guy .gif poking fun at CSS with Peter adjusting the blinds on a window, you should go Google it now. I won't pretend to be a web developer, so my CSS is pretty lousy. I've tried my best to make this website mobile friendly but it is still less dynamic than desired. Much help would be appreciated in this area. 
 
-![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot_mobile.png "Terminal Emulator - Mobile")
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot_mobile.png" height="500">
+</p>
 
 ## Plans for future improvement
 
