@@ -75,6 +75,8 @@ There are a ton of things that I would like to add to this project in the future
 
 11. Make `echo` trim off double quotes when a message is echoed like such: echo "test". Current output would be "test" instead of test.
 
+12. Error handling for `health` isn't perfect. Try executing `healthd janus` for example. I don't even know how to describe why it's like that.
+
 ## Requirements to run:  
 ```
 - A webserver  
