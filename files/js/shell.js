@@ -91,7 +91,7 @@ function handle(e){
 					document.getElementById('outbox').value += commands[i][0] + commands[i][1];
 					document.getElementById('outbox').value += "\n";	
 				}
-				document.getElementById('outbox').value += "\nExamples:\n  health mimas\n  status\n  man nslookup\n  ping google.com";
+				document.getElementById('outbox').value += "\nExamples:\n  health janus\n  status\n  ping google.com\n";
 			}
 
 
