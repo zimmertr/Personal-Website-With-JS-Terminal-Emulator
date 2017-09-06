@@ -16,9 +16,9 @@ body {
 	position: relative;
 	top: 5%;
 #	transform: translateY(-50%);
-#	width: 100%;
-#	max-width: 1050px;
-#	margin: auto;
+	width: 100%;
+	max-width: 1050px;
+	margin: auto;
 }
 
 .header {
@@ -32,7 +32,8 @@ body {
 
 .subHeader {
 	text-align: center;
-	font-size: 11pt;
+	font-size: 90%;
+	max-width: 75%;
 	vertical-align: middle;
 	margin: auto;
 	color: #d08770;
