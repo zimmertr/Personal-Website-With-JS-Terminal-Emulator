@@ -3,11 +3,7 @@
 __LIVE DEMO:__ https://tjzimmerman.com
 
 ## Summary
-This website is mostly written in Javascript. But also utilizes BASH, Perl, and Python in the backend. I made this website in an attempt to learn Javascript, but also to make my personal resume website better. In retrospective it's a little ghastly that I chose to use cgi scripts for the backend legwork. I recognize now that a web API would have been a much better design. A future rewrite may, perhaps, include that revision.
-
-On my website, you'll find an interactive terminal emulator that supports a dozen commands intended to mimic the functionality of a Linux terminal. You'll also find several sections devoted to links about my online presences. 
-
-The vertical size of the terminal output box can be adjusted by dragging the bottom right corner up and down. This is useful for viewing the contents of the terminal after running multiple commands or commands with large amount of output, such as `status`.
+This Web Application is mostly written in Javascript. But also utilizes BASH, Perl, and Python in the backend. I made it both in an attempt to learn Javascript and to improve my personal website. In retrospective it was a poor decision to to use cgi scripts in the backend. I recognize now that a web API would have been a much better design. A future rewrite may, perhaps, include that revision. 
 
 ![Alt text](https://raw.githubusercontent.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/master/screenshot.png "Terminal Emulator")
 
@@ -35,16 +31,24 @@ Each command has an included manpage that can be accessed with `man >command<`. 
 
 ## How does it work?
 
-An event handler listens for a `return/enter` keypress. When a string is sent to the terminal, it is stored in a variable and compared against a whitelist of commands. If a match is found, the application executes the command with whatever parameters are provided. Basic error handling for PEBKAC & server-side issues has been included. Additionally the browser's `local storage` is leveraged to retain a temporary archive if historically executed commands.
+The application is quite simple. An event handler is spawned by `shell.js` that listens for STDINN. When a query is detected, the string in the `input field` is parsed and stored as a variable. It is then compared against a whitelist of commands. If a match is detected, one of two things will happen.
 
-Commands that require communication with the internal network do so by chainloading BASH scripts. These scripts were all written to perform some Linux magic to obtain the desired metrics. These files can be found in the `cgi-bin` folder. I've attempted to document them, however some parts may prove difficult to read. 
+1. If the command is simple enough in nature, `man for example`, javascript can handle it will and proceed to do so.
+2. If the command is complex or involves communication with my internal network, then a separate cgi script is chainloaded to complete the task. 
 
-After a command is executed, the terminal enters its `cleanup` phase. This is used to scroll the output box to the end STDOUT in case it takes up more lines than the terminal has available. An empty line is added after the command is ran, and the shell prompt area is cleared of the previous command. 
+The resulting output is then returned to the terminal as STDOUT/STDERR. After a command has finished executing, the terminal enters the `cleanup` phase. This is used to scroll the output box to the end of STDOUT/STDERR in the event that it takes up more lines than are available. The `input field` is then purged of the executed command and a new line is inserted following the output to prepare for another command.
+
+Some other notable things: 
+```
+- The application supports moderate error handling for both server-side and PEBKAC issues.
+- The browser's local storage is leveraged to persist a .tjsh_history file, of sorts. for `history`.
+- The vertical size of the outbox box can be adjusted by dragging the bottom right corner up and down. 
+```
 
 
 ## Is this safe?
 
-It should be. No commands are executed locally. Instead, they are matched against a whitelist of supported commands. If a match is found, a separate script is then chainloaded by the server and the output is sent back to the server. If anyone wants to help me with pentesting or XSS I would really appreciate the opportunity for a learning experience. Feel free to email me at tj@tjzimmerman.com if interested.
+I _think_ so. Any commands that interact with my internal network are matched against a whitelist first. If a match is found, a separate script is then chainloaded by the server and the output is sent back to the server. If anyone wants to help me with pentesting or XSS I would really appreciate the opportunity for a learning experience. Feel free to email me at tj@tjzimmerman.com if interested.
 
 
 ## Mobile website
@@ -59,7 +63,7 @@ If you haven't seen the Family Guy .gif poking fun at CSS with Peter adjusting t
 There are a ton of things that I would like to add to this project in the future. But the goal of the project was only ever to learn javascript and to improve my website so I have since halted development.
 
 _Some ideas I have for improvement are:_
-
+```
 1. Merging the shell prompt and the outbput box into a single field to better mimic the aesthetic of a true terminal shell.  
 
 2. Making commands async to the browser to avoid page hangs.
@@ -83,7 +87,7 @@ _Some ideas I have for improvement are:_
 11. Make `echo` trim off double quotes when a message is echoed like such: echo "test". Current output would be "test" instead of test.
 
 12. Error handling for `health` isn't perfect. Try executing `healthd janus` for example. I don't even know how to describe why it's like that.
-
+```
 
 ## Requirements to run:  
 ```
