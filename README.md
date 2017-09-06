@@ -73,6 +73,8 @@ There are a ton of things that I would like to add to this project in the future
 
 10. Make `weather` command perform API call on demand. Rather than on a cron. So as to alleviate load on Wundergroun's Server.
 
+11. Make `echo` trim off double quotes when a message is echoed like such: echo "test". Current output would be "test" instead of test.
+
 ## Requirements to run:  
 ```
 - A webserver  
