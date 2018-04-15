@@ -9,7 +9,7 @@ RUN touch /root/{crontab,weather_updator.sh}
 RUN chmod +x /root/weather_updator.sh
 RUN echo '#!/bin/bash' > /root/weather_updator.sh
 RUN echo 'date=$(date)' >> /root/weather_updator.sh
-RUN echo '/usr/bin/weatherpy | /usr/bin/head -n -1 > /root/weather.txt 2>&1' > /root/weather_updator.sh
+RUN echo '/usr/bin/weatherpy | /usr/bin/head -n -1 > /root/weather.txt 2>&1' >> /root/weather_updator.sh
 RUN echo '/usr/bin/weatherpy -feat civilian >> /root/weather.txt' >> /root/weather_updator.sh
 RUN echo "echo 'Last updated:' \$date >> /root/weather.txt" >> /root/weather_updator.sh
 
