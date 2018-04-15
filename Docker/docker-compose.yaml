@@ -11,12 +11,11 @@ services:
     
     httpd:
         image: zimmertr/personal-website:latest
-        #        depends_on: 
-        #    - weatherpy
+        depends_on: 
+            - weatherpy
         restart: always
         hostname: "personal_website"
         ports:
             - "80:80"
         volumes:
             - /mnt/Hub/apps/Weatherpy/weather.txt:/var/www/cgi-bin/weather.txt
- 
