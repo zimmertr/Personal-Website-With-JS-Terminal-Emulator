@@ -95,8 +95,8 @@ _Some ideas I have for improvement are:_
 ## Requirements to run:  
 ```
 - A webserver  
-- PHP (For the execution of provided CGI scripts)  
-- Provided CGI scripts placed in /usr/lib/cgi-bin/  
+- Perl (For the execution of provided CGI scripts)  
+- Provided CGI scripts placed in /var/www/cgi-bin/  
 - weatherpy: https://github.com/JackWink/Weather (For obtaining weather information)
-- Cronjob to update weather every minute: */5 * * * * /usr/lib/cgi-bin/getWeather.sh
+- Cronjob to update weather every minute: */5 * * * * /var/www/getWeather.sh
 ```
