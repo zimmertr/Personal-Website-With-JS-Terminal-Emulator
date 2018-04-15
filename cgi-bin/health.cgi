@@ -7,7 +7,7 @@ comstring="sol.milkyway"
 
 #ensure snmpwalk installed to avoid hanging browser
 if ! snmpwalk -t .1 -v2c -c $comstring -v 2c $QUERY_STRING .1.3.6.1.2.1.25.3.3.1.2 > /dev/null; then
-        echo "Unable to receiv health information from $QUERY_STRING."
+        echo "Unable to retrieve health information from $QUERY_STRING."
         exit
 fi
 
