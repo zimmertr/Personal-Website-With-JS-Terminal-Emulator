@@ -13,7 +13,7 @@ RUN echo "echo 'last run at ' \$date" >> /root/date_updator.sh
 
 RUN echo '*/5 * * * * /usr/bin/weatherpy | /usr/bin/head -n -1 > /root/weather.txt 2>&1' > /root/crontab
 RUN echo '*/5 * * * * /usr/bin/weatherpy -feat civilian >> /root/weather.txt' >> /root/crontab
-RUN echo "*/5 * * * * /root/date_updator.sh" >> /root/crontab
+RUN echo "*/5 * * * * /root/date_updator.sh >> /root/weather.txt" >> /root/crontab
 
 RUN crontab /root/crontab
 
