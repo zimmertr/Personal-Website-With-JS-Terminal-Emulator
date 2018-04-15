@@ -1,10 +1,11 @@
 httpd:
-    build: .
-    dockerfile: Dockerfile
-    hostname: "httpd"
+    image: zimmertr/personal-website:latest
+    hostname: "personal_website"
     ports:
         - "80:80"
     volumes:
-        - /apps/Apache/www:/var/www
-        - /apps/Apache/httpd:/etc/httpd/
-        - /apps/Apache/logs:/var/log/httpd
+        - /mnt/Hub/apps/Apache/www:/var/www
+        - /mnt/Hub/apps/Apache/httpd:/etc/httpd/
+        - /mnt/Hub/apps/Apache/logs:/var/log/httpd
+        - /mnt/Hub/apps/Apache/weatherrc:/root/.weatherrc
+
