@@ -1,0 +1,11 @@
+httpd:
+    image: zimmertr/personal-website:latest
+    hostname: "personal_website"
+    ports:
+        - "80:80"
+    volumes:
+        - /apps/Apache/www:/var/www
+        - /apps/Apache/httpd:/etc/httpd/
+        - /apps/Apache/logs:/var/log/httpd
+        - /apps/Apache/weatherrc:/root/.weatherrc
+
