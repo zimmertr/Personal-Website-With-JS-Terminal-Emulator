@@ -1,6 +1,6 @@
 # Personal Website With JS Terminal Emulator
 
-__LIVE DEMO:__ https://tjzimmerman.com
+__LIVE DEMO:__ https://tjzimmerman.com  
 __DOCKER CONTAINER:__ https://hub.docker.com/r/zimmertr/personal-website/
 
 ## Summary
