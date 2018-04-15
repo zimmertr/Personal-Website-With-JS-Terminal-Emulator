@@ -1,6 +1,7 @@
 FROM centos:latest
 
-RUN yum update; yum install epel-release -y; yum update; yum install httpd cronie perl perl-CGI git python-setuptools -y
+RUN yum install epel-release -y
+RUN yum install httpd cronie perl perl-CGI git python-setuptools net-snmp-utils bind-utils -y
 
 RUN git clone https://github.com/JackWink/Weather.git
 RUN cd Weather && python setup.py install

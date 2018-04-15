@@ -4,8 +4,8 @@ httpd:
     ports:
         - "80:80"
     volumes:
-        - /mnt/Hub/apps/Apache/www:/var/www
-        - /mnt/Hub/apps/Apache/httpd:/etc/httpd/
-        - /mnt/Hub/apps/Apache/logs:/var/log/httpd
-        - /mnt/Hub/apps/Apache/weatherrc:/root/.weatherrc
+        - /apps/Apache/www:/var/www
+        - /apps/Apache/httpd:/etc/httpd/
+        - /apps/Apache/logs:/var/log/httpd
+        - /apps/Apache/weatherrc:/root/.weatherrc
 
