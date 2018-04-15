@@ -16,5 +16,7 @@ RUN echo "echo 'Last updated:' \$date >> /root/weather.txt" >> /root/weather_upd
 RUN echo "*/3 * * * * /root/weather_updator.sh" >> /root/crontab
 RUN crontab /root/crontab
 
+RUN touch /root/weather.txt
+
 CMD ["-n"]
 ENTRYPOINT ["/usr/sbin/crond"]
