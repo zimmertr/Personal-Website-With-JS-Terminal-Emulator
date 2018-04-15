@@ -15,4 +15,4 @@ RUN touch /startup.sh; echo "/var/www/cgi-bin/getWeather.sh > /dev/null 2>&1" > 
 RUN chmod +x /startup.sh
 
 CMD ["-D", "FOREGROUND"]
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["/usr/bin/bash /startup.sh"]
