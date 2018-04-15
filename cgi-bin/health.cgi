@@ -1,11 +1,16 @@
 #!/bin/bash
-
 echo "Content-type: text"
 echo
 
-
 #comstring=$(nslookup $QUERY_STRING | tail -n 2 | awk '{print $2}')
 comstring="sol.milkyway"
+
+#ensure snmpwalk installed to avoid hanging browser
+if ! snmpwalk -t .1 -v2c -c $comstring -v 2c $QUERY_STRING .1.3.6.1.2.1.25.3.3.1.2 > /dev/null; then
+        echo "Failed to receive snmp payloads from $QUERY_STRING."
+        exit
+fi
+
 #############
 #Check to see if the query string exists in your DNS
 ############
