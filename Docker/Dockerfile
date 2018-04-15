@@ -11,7 +11,7 @@ RUN echo "*/5 * * * * /var/www/cgi-bin/getWeather.sh" >> /root/existing_cron; cr
 
 RUN echo 'LoadModule cgi_module modules/mod_cgi.so' >> /etc/httpd/conf/httpd.conf
 
-RUN touch /startup.sh; echo "/var/www/cgi-bin/getWeather.sh" > /startup.sh; echo "/sbin/crond" >> /startup.sh; echo "/usr/sbin/httpd" >> /startup.sh
+RUN touch /startup.sh; echo "/var/www/cgi-bin/getWeather.sh > /dev/null 2>&1" > /startup.sh; echo "/sbin/crond > /dev/null 2>&1" >> /startup.sh; echo "/usr/sbin/httpd" >> /startup.sh
 RUN chmod +x /startup.sh
 
 CMD ["-D", "FOREGROUND"]
