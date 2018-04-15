@@ -7,3 +7,10 @@ httpd:
     volumes:
         - ./weatherrc:/root/.weatherrc
 
+weatherpy
+    image: zimmertr/weatherpy:latest
+    restart: aways
+    hostname: "weatherpy"
+    volumes:
+        - /mnt/Hub/apps/Apache/weatherrc:/root/.weatherrc
+        - /mnt/Hub/apps/Apache/weather.txt:/var/www/cgi-bin/weather.txt
