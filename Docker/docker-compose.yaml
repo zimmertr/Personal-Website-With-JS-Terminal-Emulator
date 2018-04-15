@@ -1,5 +1,6 @@
 httpd:
     image: zimmertr/personal-website:latest
+    restart: always
     hostname: "personal_website"
     ports:
         - "80:80"
