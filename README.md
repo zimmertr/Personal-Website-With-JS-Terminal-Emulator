@@ -14,6 +14,10 @@ This Web Application is mostly written in Javascript. But also utilizes BASH, Pe
 ## Docker Deployment
 
 1) Use docker-compose file found here: https://github.com/zimmertr/Personal-Website-With-JS-Terminal-Emulator/blob/master/Docker/docker-compose.yaml in conjuction with the docker container found here: https://hub.docker.com/r/zimmertr/personal-website/
+2) Make sure you create these files so Docker doesn't auto-create them as directories. 
+    `/Weatherpy/weatherrc`: https://github.com/JackWink/Weather/blob/master/README.md#configuring
+    `/Weatherpy/weather.txt`: Can be a blank file as long as it is mounted RW. Will be overwritten every 3 minutes with new data starting at t+3M.
+3) Drop your personal files in `/Files/` and they will be available at `www.domain.com/Files/`
 
 ## Dedicated Server Deployment
 
