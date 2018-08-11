@@ -5,8 +5,8 @@ services:
         restart: always
         hostname: "weatherpy"
         volumes:
-            - /mnt/SaturnPool/Apps/Weatherpy/weatherrc:/root/.weatherrc
-            - /mnt/SaturnPool/Apps/Weatherpy/weather.txt:/root/weather.txt
+            - /Weatherpy/weatherrc:/root/.weatherrc
+            - /Weatherpy/weather.txt:/root/weather.txt
     
     httpd:
         image: zimmertr/personal-website:latest
@@ -17,5 +17,5 @@ services:
         ports:
             - "80:80"
         volumes:
-            - /mnt/SaturnPool/Apps/Weatherpy/weather.txt:/var/www/cgi-bin/weather.txt
-            - /mnt/SaturnPool/Apps/Apache/:/var/www/html/Files
+            - /Weatherpy/weather.txt:/var/www/cgi-bin/weather.txt
+            - /Files/:/var/www/html/Files
