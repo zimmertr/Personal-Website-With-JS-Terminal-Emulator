@@ -5,7 +5,6 @@ echo
 
 up=0
 down=-1
-#Alright. I know you're probably like "What the fuck? Why is that being instantiated as .2? Well, the truth is. I HAVE NO IDEA. For some reason /dev/tcp ALWAYS sets $down to 1 after it has been ran. Even if it's alive and it sets $up to 1 as well. So.. well this is my fix. Not sure if the same bug applies to $up or not... but my tests are showing the proper amount of servers are being returned with it being instatiated at 0. So ima leave it. whatever.
 
 echo "---------------Software-"
 timeout .2 bash -c "</dev/tcp/saturn.sol.milkyway/2000" && printf "Apache:\t\tUp\n" || printf "Apache:\t\tDown\n"
