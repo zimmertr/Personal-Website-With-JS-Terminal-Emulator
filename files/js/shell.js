@@ -65,7 +65,7 @@ function handle(e){
 			else if (input == "containers"){
 				document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
 				var req = new XMLHttpRequest();
-				req.open('GET', '/cgi-bin/getstats.cgi', false);
+				req.open('GET', '/cgi-bin/getStats.cgi', false);
 				req.send(null);
 				
 				document.getElementById('outbox').value += req.responseText;
