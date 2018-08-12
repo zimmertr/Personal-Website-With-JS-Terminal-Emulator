@@ -193,7 +193,7 @@ function handle(e){
 					document.getElementById('outbox').value += "HISTORY - Display previously executed commands.\n\nDESCRIPTION - History displays all previously executed commands that are held within your browser's local storage.\n";
 				}
 				else if (input == "man health"){
-					document.getElementById('outbox').value += "HEALTH - Query a host for its health information.\n\nDESCRIPTION - Health queries a host located on the domain for health information including  cpu, memory, load, swap, logged in system users, running system processes, and the system uptime.\n\nSTRUCTURE - health [hostname]\n\nHINT - Try `health mimas` to see an example.\n\nWARNING - Command may take a long time to finish executing if services are down.\n";
+					document.getElementById('outbox').value += "HEALTH - Query a host for its health information.\n\nDESCRIPTION - Health queries a host located on the domain for health information including  cpu, memory, load, swap, logged in system users, running system processes, and the system uptime.\n\nSTRUCTURE - health [hostname]\n\nHINT - Try 'health saturn' to see an example.\n\nWARNING - Command may take a long time to finish executing if services are down.\n";
 				}
 				else if (input == "man ifconfig"){
 					document.getElementById('outbox').value += "IFCONFIG - Return network information about the server.\n\nDESCRIPTION - Ifconfig queries the server for information relating to it's network configuraiton. Displays the server's IP Address, domain, protocol, port, and relative path.\n";
