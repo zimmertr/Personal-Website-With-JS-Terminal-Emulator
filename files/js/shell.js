@@ -71,7 +71,7 @@ function handle(e){
 				document.getElementById('outbox').value += req.responseText;
 			}
 
-			else if(input.startsWith("echo"))`{
+			else if(input.startsWith("echo")){
 				var output = "";
 
 				document.getElementById('outbox').value += "root@tjsh > " + input + "\n";
