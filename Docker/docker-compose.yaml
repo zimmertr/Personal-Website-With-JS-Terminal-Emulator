@@ -1,21 +1,44 @@
 version: '3'
 services:
-    weatherpy:
+        Statsbot:
+        image: zimmertr/statsbot:latest
+        restart: always
+        hostname: "statsbot"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /Apps/Statsbot/stats.txt:/stats.txt
+        environment:
+            - TZ="Pacific"
+            - PUID=1002
+            - PGID=1007
+
+    Weatherpy:
         image: zimmertr/weatherpy:latest
         restart: always
         hostname: "weatherpy"
         volumes:
-            - /Weatherpy/weatherrc:/root/.weatherrc
-            - /Weatherpy/weather.txt:/root/weather.txt
-    
+            - /Apps/Weatherpy/weatherrc:/root/.weatherrc
+            - /Apps/Weatherpy/weather.txt:/root/weather.txt
+        environment:
+            - TZ="Pacific"
+            - PUID=1002
+            - PGID=1007
+
     httpd:
         image: zimmertr/personal-website:latest
-        depends_on: 
-            - weatherpy
+        depends_on:
+            - Weatherpy
+            - Statsbot
         restart: always
         hostname: "personal_website"
         ports:
-            - "80:80"
+            - "2000:80"
         volumes:
-            - /Weatherpy/weather.txt:/var/www/cgi-bin/weather.txt
-            - /Files/:/var/www/html/Files
+            - /Apps/Statsbot/stats.txt:/var/www/cgi-bin/stats.txt:ro
+            - /Apps/Weatherpy/weather.txt:/var/www/cgi-bin/weather.txt:ro
+            - /Apps/Apache/Files:/var/www/html/Files
+            - /Apps/Apache/analytics.js:/var/www/html/analytics.js
+        environment:
+            - TZ="Pacific"
+            - PUID=1002
+            - PGID=1007
