@@ -22,6 +22,9 @@ timeout .2 bash -c "</dev/tcp/mimas.sol.milkyway/3000" && let up++ || let down++
 timeout .2 bash -c "</dev/tcp/mimas.sol.milkyway/8086" && printf "InfluxDB:\t\tUp\n" || printf "InfluxDB:\t\tDown\n"
 timeout .2 bash -c "</dev/tcp/mimas.sol.milkyway/8086" && let up++ || let down++
 
+timeout .2 bash -c "</dev/tcp/saturn.sol.milkyway/3306" && printf "MariaDB:\t\tUp\n" || printf "MariaDB:\t\tDown\n"
+timeout .2 bash -c "</dev/tcp/saturn.sol.milkyway/3306" && let up++ || let down++
+
 timeout .2 bash -c "</dev/tcp/io.sol.milkyway/19999" && printf "Netdata IO:\t\tUp\n" || printf "Netdata IO:\t\tDown\n"
 timeout .2 bash -c "</dev/tcp/io.sol.milkyway/19999" && let up++ || let down++
 
